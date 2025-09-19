@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap");
+
+.titulo {
+  color: rgb(255, 170, 0);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 30px;
+  background-color: #202223;
+  border-radius: 10px;
+  border: 2px solid rgb(255, 170, 0);
+  margin-left: 300px;
+  margin-right: 300px;
+  padding: 5px;
+  box-shadow: black 2px 4px 8px;
+  transition: all 0.3s ease;
+}
+
+.titulo:hover {
+  font-size: 60px;
+  padding: 10px;
+  margin-top: 35px;
+  margin-left: 295px;
+  margin-right: 295px;
+}

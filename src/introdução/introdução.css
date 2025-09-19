@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
+
+/* Reset básico e estilização geral */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ body {
+  box-shadow: black 2px 2px 2px ;
+ }
+/* Estilo para o container principal do componente "Introdução" */
+.pai {
+  display: flex; /* Transforma o container em um flex container */
+  justify-content: space-between; /* Distribui os itens filhos com espaço entre eles */
+  align-items: center; /* Alinha os itens filhos verticalmente ao centro */
+  padding: 50px 80px; /* Adiciona espaço interno (superior/inferior, esquerdo/direito) */
+  background-color: #2a2a2a; /* Cor de fundo cinza escuro */
+  min-height: 80vh; /* Garante que o container ocupe pelo menos 80% da altura da viewport */
+  color: #ffffff; /* Cor do texto padrão branca */
+  font-family: 'Montserrat', sans-serif; /* Fonte secundária para textos gerais */
+ 
+}
+
+/* Estilo para o bloco de texto (Bem vindo, Nicco Máquinas, etc.) */
+.pai > div:first-child { /* Seleciona o primeiro filho direto de .pai */
+  flex: 1; /* Permite que este bloco ocupe o espaço disponível */
+  margin-right: 40px; /* Espaço à direita do bloco de texto */
+}
+
+/* Estilo para o título "Bem vindo" */
+.bv {
+  font-size: 2.5em; /* Tamanho grande para o título principal */
+  font-family: 'Bebas Neue', sans-serif; /* Fonte principal para títulos */
+  color:rgb(255, 170, 0); /* Amarelo ouro para destacar */
+  margin-bottom: 0px; /* Espaço abaixo do título */
+  line-height: .9; /* Espaçamento entre linhas do H1 */
+}
+
+/* Estilo para o título "Nicco Máquinas" */
+.nm {
+  font-size: 2.5em; /* Tamanho ainda maior para o nome da empresa */
+  font-family: 'Bebas Neue', sans-serif; /* Mesma fonte principal */
+  color: rgb(255, 170, 0); /* Amarelo ouro */
+  margin-bottom: px; /* Mais espaço abaixo */
+  line-height: 1;
+  white-space: nowrap;
+  
+}
+
+/* Estilo para o parágrafo de descrição */
+.p {
+  font-size: 0.8em; /* Tamanho legível para o parágrafo */
+  line-height: 1.5; /* Espaçamento entre linhas para melhor leitura */
+  color: #cccccc; /* Um tom de cinza mais claro para o parágrafo */
+  white-space: nowrap;
+}
+
+/* Estilo para o container da imagem */
+.img {
+  flex-shrink: 0; /* Impede que a imagem encolha se o espaço ficar apertado */
+}
+
+/* Estilo para a imagem de fundo */
+.img img {
+  width: 250px; /* Tamanho da imagem */
+  height: auto;
+  display: block; /* Remove o espaço extra abaixo da imagem */
+  border: 2px solid rgb(255, 170, 0);
+  border-radius: 20px;
+  margin-right: 5px;
+  box-shadow: black 2px 2px 10px ;
+}
+
+@media screen and (max-width: 599px) {
+  .pai {
+  display: flex; /* Transforma o container em um flex container */
+  justify-content: space-between; /* Distribui os itens filhos com espaço entre eles */
+  align-items: center; /* Alinha os itens filhos verticalmente ao centro */
+  padding: 50px 10%; /* Adiciona espaço interno (superior/inferior, esquerdo/direito) */
+  background-color: #2a2a2a; /* Cor de fundo cinza escuro */
+  min-height: 80vh; /* Garante que o container ocupe pelo menos 80% da altura da viewport */
+  color: #ffffff; /* Cor do texto padrão branca */
+  font-family: 'Montserrat', sans-serif; /* Fonte secundária para textos gerais */
+}
+
+  .img img {
+  width: 200px; /* Tamanho da imagem */
+  height: auto;
+  display: block; /* Remove o espaço extra abaixo da imagem */
+  border: 1px solid rgb(255, 170, 0);
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.bv {
+  font-size: 250%; /* Tamanho grande para o título principal */
+  font-family: 'Bebas Neue', sans-serif; /* Fonte principal para títulos */
+  color: rgb(255, 170, 0); /* Amarelo ouro para destacar */
+  margin-bottom: 5px; /* Espaço abaixo do título */
+  line-height: .9; /* Espaçamento entre linhas do H1 */
+}
+
+/* Estilo para o título "Nicco Máquinas" */
+.nm {
+  font-size: 250%; /* Tamanho ainda maior para o nome da empresa */
+  font-family: 'Bebas Neue', sans-serif; /* Mesma fonte principal */
+  color: rgb(255, 170, 0); /* Amarelo ouro */
+  margin-bottom: 2px; /* Mais espaço abaixo */
+  line-height: 1;
+}
+
+/* Estilo para o parágrafo de descrição */
+.p {
+  font-size: 80%; /* Tamanho legível para o parágrafo */
+  line-height: 1.5; /* Espaçamento entre linhas para melhor leitura */
+  color: #cccccc; /* Um tom de cinza mais claro para o parágrafo */
+  white-space: nowrap;
+}
+
+}
+
+@media screen and (max-width: 600px) {
+  .pai {
+  display: flex; /* Transforma o container em um flex container */
+  justify-content: space-between; /* Distribui os itens filhos com espaço entre eles */
+  align-items: center; /* Alinha os itens filhos verticalmente ao centro */
+  padding: 50px 15%; /* Adiciona espaço interno (superior/inferior, esquerdo/direito) */
+  background-color: #2a2a2a; /* Cor de fundo cinza escuro */
+  min-height: 80vh; /* Garante que o container ocupe pelo menos 80% da altura da viewport */
+  color: #ffffff; /* Cor do texto padrão branca */
+  font-family: 'Montserrat', sans-serif; /* Fonte secundária para textos gerais */
+}
+
+  .img img {
+  width: 190px; /* Tamanho da imagem */
+  height: auto;
+  display: block; /* Remove o espaço extra abaixo da imagem */
+  border: 1px solid rgb(255, 170, 0);
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.bv {
+  font-size: 230%; /* Tamanho grande para o título principal */
+  font-family: 'Bebas Neue', sans-serif; /* Fonte principal para títulos */
+  color: rgb(255, 170, 0); /* Amarelo ouro para destacar */
+  margin-bottom: 5px; /* Espaço abaixo do título */
+  line-height: .9; /* Espaçamento entre linhas do H1 */
+}
+
+/* Estilo para o título "Nicco Máquinas" */
+.nm {
+  font-size: 230%; /* Tamanho ainda maior para o nome da empresa */
+  font-family: 'Bebas Neue', sans-serif; /* Mesma fonte principal */
+  color: rgb(255, 170, 0); /* Amarelo ouro */
+  margin-bottom: 2px; /* Mais espaço abaixo */
+  line-height: 1;
+}
+
+/* Estilo para o parágrafo de descrição */
+.p {
+  font-size: 70%; /* Tamanho legível para o parágrafo */
+  line-height: 1.5; /* Espaçamento entre linhas para melhor leitura */
+  color: #cccccc; /* Um tom de cinza mais claro para o parágrafo */
+  white-space: nowrap;
+}
+
+}
+@media screen and (max-width: 504px) {
+.pai {
+  display: flex; /* Transforma o container em um flex container */
+  justify-content: space-between; /* Distribui os itens filhos com espaço entre eles */
+  align-items: center; /* Alinha os itens filhos verticalmente ao centro */
+  padding: 50px 10%; /* Adiciona espaço interno (superior/inferior, esquerdo/direito) */
+  background-color: #2a2a2a; /* Cor de fundo cinza escuro */
+  min-height: 80vh; /* Garante que o container ocupe pelo menos 80% da altura da viewport */
+  color: #ffffff; /* Cor do texto padrão branca */
+  font-family: 'Montserrat', sans-serif; /* Fonte secundária para textos gerais */
+}
+
+}
+
+@media screen and (max-width: 473px) {
+.pai {
+  display: flex; /* Transforma o container em um flex container */
+  justify-content: space-between; /* Distribui os itens filhos com espaço entre eles */
+  align-items: center; /* Alinha os itens filhos verticalmente ao centro */
+  padding: 50px 10%; /* Adiciona espaço interno (superior/inferior, esquerdo/direito) */
+  background-color: #2a2a2a; /* Cor de fundo cinza escuro */
+  min-height: 80vh; /* Garante que o container ocupe pelo menos 80% da altura da viewport */
+  color: #ffffff; /* Cor do texto padrão branca */
+  font-family: 'Montserrat', sans-serif; /* Fonte secundária para textos gerais */
+  
+}
+.img img {
+  width: 170px; /* Tamanho da imagem */
+  height: auto;
+  display: block; /* Remove o espaço extra abaixo da imagem */
+  border: 1px solid yellow;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.bv {
+  font-size: 200%; /* Tamanho grande para o título principal */
+  font-family: 'Bebas Neue', sans-serif; /* Fonte principal para títulos */
+  color: #FFD700; /* Amarelo ouro para destacar */
+  margin-bottom: 5px; /* Espaço abaixo do título */
+  line-height: .9; /* Espaçamento entre linhas do H1 */
+}
+
+/* Estilo para o título "Nicco Máquinas" */
+.nm {
+  font-size: 200%; /* Tamanho ainda maior para o nome da empresa */
+  font-family: 'Bebas Neue', sans-serif; /* Mesma fonte principal */
+  color: #FFD700; /* Amarelo ouro */
+  margin-bottom: 2px; /* Mais espaço abaixo */
+  line-height: 1;
+}
+
+/* Estilo para o parágrafo de descrição */
+.p {
+  font-size: 60%; /* Tamanho legível para o parágrafo */
+  line-height: 1.5; /* Espaçamento entre linhas para melhor leitura */
+  color: #cccccc; /* Um tom de cinza mais claro para o parágrafo */
+  white-space: nowrap;
+}
+
+}
+
+
+@media screen and (max-width: 436px) {
+.pai {
+  
+
+  display: grid;
+  
+  padding: 50px 10%; /* Adiciona espaço interno (superior/inferior, esquerdo/direito) */
+  background-color: #2a2a2a; /* Cor de fundo cinza escuro */
+  min-height: 80vh; /* Garante que o container ocupe pelo menos 80% da altura da viewport */
+  color: #ffffff; /* Cor do texto padrão branca */
+  font-family: 'Montserrat', sans-serif; /* Fonte secundária para textos gerais */
+  
+}
+.img img {
+  width: 170px; /* Tamanho da imagem */
+  height: auto;
+  display: block; /* Remove o espaço extra abaixo da imagem */
+  border: 1px solid yellow;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.bv {
+  font-size: 200%; /* Tamanho grande para o título principal */
+  font-family: 'Bebas Neue', sans-serif; /* Fonte principal para títulos */
+  color: #FFD700; /* Amarelo ouro para destacar */
+  margin-bottom: 5px; /* Espaço abaixo do título */
+  line-height: .9; /* Espaçamento entre linhas do H1 */
+}
+
+/* Estilo para o título "Nicco Máquinas" */
+.nm {
+  font-size: 200%; /* Tamanho ainda maior para o nome da empresa */
+  font-family: 'Bebas Neue', sans-serif; /* Mesma fonte principal */
+  color: #FFD700; /* Amarelo ouro */
+  margin-bottom: 2px; /* Mais espaço abaixo */
+  line-height: 1;
+}
+
+/* Estilo para o parágrafo de descrição */
+.p {
+  font-size: 60%; /* Tamanho legível para o parágrafo */
+  line-height: 1.5; /* Espaçamento entre linhas para melhor leitura */
+  color: #cccccc; /* Um tom de cinza mais claro para o parágrafo */
+  white-space: nowrap;
+}
+
+}
