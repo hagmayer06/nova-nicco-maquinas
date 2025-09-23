@@ -4,7 +4,7 @@ import ReactDOM from "react-dom/client";
 import Cabeçalho from "./header/cabeçalho";
 import Introdução from "./introdução/introdução";
 import CardMaq from "./nav-maq-cards/navMaq";
-import NavegaçãoMaquinas from "./cards-maquinas/card-maq";
+import NavegaçãoMaquinas from "./cards-maquinas/cards";
 import Conjunto from "./cards-maquinas/conjuntoCards";
 import Titulos from "./titulos/titulos";
 
