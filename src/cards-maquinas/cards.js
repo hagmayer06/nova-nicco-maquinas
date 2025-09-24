@@ -15,7 +15,7 @@ export default function NavegaçãoMaquinas(props) {
           <li>{props.caracteristica3}</li>
         </ul>
 
-        <h2>{props.valor}</h2>
+        <h2 class= "valor" >{props.valor}</h2>
       </div>
     </div>
   );

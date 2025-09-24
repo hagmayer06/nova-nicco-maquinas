@@ -9,17 +9,18 @@
   background-color: #202223;
   border-radius: 10px;
   border: 2px solid rgb(255, 170, 0);
-  margin-left: 300px;
-  margin-right: 300px;
-  padding: 5px;
+  margin-left: 290px;
+  margin-right: 290px;
+  padding: 10px;
   box-shadow: black 2px 4px 8px;
   transition: all 0.3s ease;
 }
 
 .titulo:hover {
-  font-size: 60px;
-  padding: 10px;
+  font-size: 50px;
+  padding: 15px;
   margin-top: 35px;
-  margin-left: 295px;
-  margin-right: 295px;
+  margin-left: 290px;
+  margin-right: 290px;
+  box-shadow: black 4px 6px 10px;
 }

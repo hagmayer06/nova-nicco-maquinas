@@ -18,7 +18,7 @@
   height: 130px; /* Altura da imagem reduzida novamente */
   object-fit: cover;
   border-radius: 8px;
-  border: 2px solid #ffcc00; /* Borda amarela */
+  border: 2px solid rgb(255, 170, 0); /* Borda amarela */
 }
 
 .card-conteudo {
@@ -30,7 +30,7 @@
 }
 
 .nome-maq {
-  color: #ffcc00; /* Amarelo */
+  color: rgb(255, 170, 0); /* Amarelo */
   font-size: 1.1em; /* Fonte do título menor */
   margin-bottom: 4px;
 }
@@ -55,8 +55,8 @@
 }
 
 .valor {
-  color: #ffcc00; /* Amarelo */
-  font-size: 0.9em; /* Fonte do valor menor */
+  color: rgb(255, 170, 0); /* Amarelo */
+  font-size: 20px; /* Fonte do valor menor */
   font-weight: bold;
   margin-top: 6px;
 } 
