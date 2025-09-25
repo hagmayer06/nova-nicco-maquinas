@@ -1,0 +1,24 @@
+.posição {
+  display: flex;
+  /* Isso permite que os cards quebrem para a próxima linha */
+  flex-wrap: wrap; 
+  
+  /* Centraliza os cards no container */
+  justify-content: center; 
+  
+  /* Espaçamento entre os cards na horizontal */
+  gap: 20px;
+  
+  /* Mantém o espaçamento superior */
+  margin-top: 25px;
+}
+
+.mostrarMaisOuMenos {
+  border: 2px solid rgb(255, 170, 0);
+  border-radius: 10px;
+  background-color: rgb(43, 42,42);
+  color: rgb(255, 170, 0) ;
+  box-shadow: black 2px 2px 6px;
+  margin-bottom: 15px;
+ 
+}

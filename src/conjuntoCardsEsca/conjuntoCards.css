@@ -1,4 +1,8 @@
-.posição {
+.fundo {
+  background-color: rgb(255, 170, 0);
+  padding: 2px;
+}
+.posiçãoE {
   display: flex;
   /* Isso permite que os cards quebrem para a próxima linha */
   flex-wrap: wrap; 
@@ -11,6 +15,7 @@
   
   /* Mantém o espaçamento superior */
   margin-top: 25px;
+  
 }
 
 .mostrarMaisOuMenos {

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import NavegaçãoMaquinas from './cards';
-import "./conjuntoCards.css"
+import React, { useState } from "react";
+import NavegaçãoMaquinas from "../cards-maquinas/cards";
+import Titulos from "../titulos/titulos";
+import "./conjuntoCards.css";
 
 const todasAsMaquinas = [
   {
@@ -9,7 +10,7 @@ const todasAsMaquinas = [
     caracteristica1: "lindo",
     caracteristica2: "lindo",
     caracteristica3: "lindo",
-    valor: "19,90"
+    valor: "19,90",
   },
   {
     nome: "Máquina B",
@@ -17,7 +18,7 @@ const todasAsMaquinas = [
     caracteristica1: "incrível",
     caracteristica2: "incrível",
     caracteristica3: "incrível",
-    valor: "190.000"
+    valor: "190.000",
   },
   {
     nome: "Máquina C",
@@ -25,7 +26,7 @@ const todasAsMaquinas = [
     caracteristica1: "bonito",
     caracteristica2: "bonito",
     caracteristica3: "bonito",
-    valor: "19,90"
+    valor: "19,90",
   },
   {
     nome: "Máquina D",
@@ -33,7 +34,7 @@ const todasAsMaquinas = [
     caracteristica1: "potente",
     caracteristica2: "potente",
     caracteristica3: "potente",
-    valor: "50.000"
+    valor: "50.000",
   },
   {
     nome: "Máquina E",
@@ -41,7 +42,7 @@ const todasAsMaquinas = [
     caracteristica1: "moderno",
     caracteristica2: "moderno",
     caracteristica3: "moderno",
-    valor: "75.000"
+    valor: "75.000",
   },
   {
     nome: "Máquina F",
@@ -49,7 +50,7 @@ const todasAsMaquinas = [
     caracteristica1: "compacto",
     caracteristica2: "compacto",
     caracteristica3: "compacto",
-    valor: "25.000"
+    valor: "25.000",
   },
   {
     nome: "Máquina G",
@@ -57,7 +58,7 @@ const todasAsMaquinas = [
     caracteristica1: "compacto",
     caracteristica2: "compacto",
     caracteristica3: "compacto",
-    valor: "25.000"
+    valor: "25.000",
   },
   {
     nome: "Máquina H",
@@ -65,7 +66,7 @@ const todasAsMaquinas = [
     caracteristica1: "compacto",
     caracteristica2: "compacto",
     caracteristica3: "compacto",
-    valor: "25.000"
+    valor: "25.000",
   },
   {
     nome: "Máquina I",
@@ -73,11 +74,11 @@ const todasAsMaquinas = [
     caracteristica1: "compacto",
     caracteristica2: "compacto",
     caracteristica3: "compacto",
-    valor: "25.000"
+    valor: "25.000",
   },
 ];
 
-export default function Conjunto() {
+export default function ConjuntoE() {
   const [maquinasVisiveis, setMaquinasVisiveis] = useState(3);
 
   const handleButtonClick = () => {
@@ -87,27 +88,32 @@ export default function Conjunto() {
       setMaquinasVisiveis(3); // Volta para o valor inicial de 3.
     } else {
       // Caso contrário, significa que ainda há mais a mostrar.
-      setMaquinasVisiveis(prevCount => prevCount + 3);
+      setMaquinasVisiveis((prevCount) => prevCount + 3);
     }
   };
 
   return (
-    <div className="posição">
-      {todasAsMaquinas.slice(0, maquinasVisiveis).map((maquina, index) => (
-        <NavegaçãoMaquinas
-          key={index}
-          nome={maquina.nome}
-          imagem={maquina.imagem}
-          caracteristica1={maquina.caracteristica1}
-          caracteristica2={maquina.caracteristica2}
-          caracteristica3={maquina.caracteristica3}
-          valor={maquina.valor}
-        />
-      ))}
+    <div className="fundo">
+        <Titulos id="Esca" titulo="Escavadeira"/>
+      <div className="posiçãoE">
+        {todasAsMaquinas.slice(0, maquinasVisiveis).map((maquina, index) => (
+          <NavegaçãoMaquinas
+            key={index}
+            nome={maquina.nome}
+            imagem={maquina.imagem}
+            caracteristica1={maquina.caracteristica1}
+            caracteristica2={maquina.caracteristica2}
+            caracteristica3={maquina.caracteristica3}
+            valor={maquina.valor}
+          />
+        ))}
 
-      <button onClick={handleButtonClick} className='mostrarMaisOuMenos'>
-        {maquinasVisiveis < todasAsMaquinas.length ? "Mostrar Mais" : "Mostrar Menos"}
-      </button>
+        <button onClick={handleButtonClick} className="mostrarMaisOuMenos">
+          {maquinasVisiveis < todasAsMaquinas.length
+            ? "Mostrar Mais"
+            : "Mostrar Menos"}
+        </button>
+      </div>
     </div>
   );
 }
