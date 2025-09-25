@@ -1,27 +1,32 @@
 @import url("https://fonts.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap");
-
 .titulo {
+  /*
+  ADICIONADO: box-sizing: border-box;
+  Isso garante que o 'padding' e a 'border' sejam incluídos DENTRO
+  da largura e altura do elemento, e não adicionados a elas.
+  */
+  box-sizing: border-box;
+
   color: rgb(255, 170, 0);
   font-family: "Bebas Neue", sans-serif;
-  font-size:250%;
+  font-size: 250%;
   text-align: center;
   margin-top: 30px;
   background-color: #202223;
   border-radius: 10px;
   border: 2px solid rgb(255, 170, 0);
-  margin-left: 290px;
-  margin-right: 290px;
-  padding: 10px;
+  margin-left: 220px;
+  margin-right: 220px;
+  padding: 3px 3px 3px 3px ;
   box-shadow: black 2px 4px 8px;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .titulo:hover {
-  /* This line was removed, as it's not needed. */
-  /* font-size: 50px; */ 
-  padding: 15px;
+  /* Mantendo o efeito de hover com as alterações */
+  font-size: 255%;
+  padding: 5px;
   margin-top: 35px;
-  margin-left: 290px;
-  margin-right: 290px;
   box-shadow: black 4px 6px 10px;
 }

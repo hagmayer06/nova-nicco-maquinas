@@ -7,6 +7,10 @@ import CardMaq from "./nav-maq-cards/navMaq";
 import NavegaçãoMaquinas from "./cards-maquinas/cards";
 import Conjunto from "./conjuntoCardsFlo/conjuntoCards";
 import ConjuntoE from "./conjuntoCardsEsca/conjuntoCards";
+import ConjuntoR from "./conjuntoCardsRetro/conjuntoR";
+import ConjuntoP from "./conjuntoCardsPáC/conjuntoP";
+import Footer from "./rodapé/rodapé";
+
 
 
 
@@ -19,6 +23,10 @@ root.render(
     <CardMaq />
     <Conjunto/>
     <ConjuntoE/>
+    <ConjuntoR />
+    <ConjuntoP />
+    <Footer />
+
     
 
   </>

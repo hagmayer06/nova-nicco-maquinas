@@ -27,7 +27,7 @@ export default function CardMaq() {
           </a>
         </div>
         <div>
-          <a href="">
+          <a href="#retro">
             <img
               className="img-nav"
               src="/assets/RETRO.png"
@@ -37,7 +37,7 @@ export default function CardMaq() {
           </a>
         </div>
         <div>
-          <a href="">
+          <a href="#pá carregadeira">
             <img
               className="img-nav"
               src="/assets/PÁCARRE.png"
