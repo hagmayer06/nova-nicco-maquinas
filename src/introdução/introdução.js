@@ -1,4 +1,6 @@
 import './introdução.css'
+import VideoIntro from "./VideoIntro";
+
 export default function Introdução() {
   return (
     <div className="pai">
@@ -19,7 +21,7 @@ export default function Introdução() {
         </div>
       </div>
       <div class="img">
-        <img src="/assets/s.jpg" width="200px"/>
+        <VideoIntro/>
       </div>
     </div>
   );

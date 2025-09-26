@@ -1,0 +1,13 @@
+/* Adicione esta classe ao seu arquivo CSS */
+.video-container {
+  max-width: 300px; /* Limita o tamanho máximo do vídeo */
+  margin: 0 auto;   /* Centraliza o container na página */
+  padding: 20px;
+  
+}
+
+.video-container video {
+  display: block; /* Garante que a tag de vídeo se comporte como um bloco */
+  border-radius: 20px;
+  border: 2px solid rgb(255, 170, 0);
+}

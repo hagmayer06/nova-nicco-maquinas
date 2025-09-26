@@ -30,11 +30,29 @@
 
 /* Estilo para o título "Bem vindo" */
 .bv {
-  font-size: 2.5em; /* Tamanho grande para o título principal */
-  font-family: 'Bebas Neue', sans-serif; /* Fonte principal para títulos */
-  color:rgb(255, 170, 0); /* Amarelo ouro para destacar */
-  margin-bottom: 0px; /* Espaço abaixo do título */
-  line-height: .9; /* Espaçamento entre linhas do H1 */
+  font-size: 2.5em;
+  font-family: 'Bebas Neue', sans-serif; 
+  color:rgb(255, 170, 0); 
+  margin-bottom: 0px; 
+  line-height: .9; 
+  display: inline-block;
+  animation-name: deslizarParaDireita;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes deslizarParaDireita {
+  0% {
+    /* Começa 500px à esquerda da posição final */
+    transform: translateX(-500px); 
+    opacity: 0; 
+  }
+  
+  100% {
+    /* Para 50px à direita da sua posição original */
+    transform: translateX(0px); 
+    opacity: 1; 
+  }
 }
 
 /* Estilo para o título "Nicco Máquinas" */
@@ -44,7 +62,24 @@
   color: rgb(255, 170, 0); /* Amarelo ouro */
   margin-bottom: px; /* Mais espaço abaixo */
   line-height: 1;
-  white-space: nowrap;
+  white-space: nowrap;display: inline-block;
+  animation-name: deslizarParaDireita;
+  animation-duration: 6s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes deslizarParaDireita {
+  0% {
+    /* Começa 500px à esquerda da posição final */
+    transform: translateX(-500px); 
+    opacity: 0; 
+  }
+  
+  100% {
+    /* Para 50px à direita da sua posição original */
+    transform: translateX(0px); 
+    opacity: 1; 
+  }
   
 }
 
