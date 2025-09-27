@@ -59,4 +59,138 @@
   font-size: 20px; /* Fonte do valor menor */
   font-weight: bold;
   margin-top: 6px;
-} 
+}
+
+/* Responsividade para Telas Grandes - Cards de Máquinas */
+@media (min-width: 1200px) {
+  .card {
+    width: 280px;
+    max-width: 280px;
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .card-imagem {
+    height: 160px;
+    border-width: 3px;
+  }
+
+  .nome-maq {
+    font-size: 1.3em;
+  }
+
+  .car-maq li {
+    padding: 6px 10px;
+    font-size: 0.9em;
+  }
+
+  .valor {
+    font-size: 24px;
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .card {
+    width: 320px;
+    max-width: 320px;
+    padding: 18px;
+    gap: 15px;
+  }
+
+  .card-imagem {
+    height: 180px;
+    border-width: 3px;
+  }
+
+  .nome-maq {
+    font-size: 1.4em;
+    margin-bottom: 6px;
+  }
+
+  .car-maq {
+    gap: 8px;
+  }
+
+  .car-maq li {
+    padding: 8px 12px;
+    font-size: 1em;
+  }
+
+  .valor {
+    font-size: 28px;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .card {
+    width: 380px;
+    max-width: 380px;
+    padding: 22px;
+    gap: 18px;
+    border-radius: 15px;
+  }
+
+  .card-imagem {
+    height: 220px;
+    border-width: 4px;
+    border-radius: 12px;
+  }
+
+  .nome-maq {
+    font-size: 1.6em;
+    margin-bottom: 8px;
+  }
+
+  .car-maq {
+    gap: 10px;
+  }
+
+  .car-maq li {
+    padding: 10px 15px;
+    font-size: 1.1em;
+    border-radius: 8px;
+  }
+
+  .valor {
+    font-size: 32px;
+    margin-top: 12px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .card {
+    width: 460px;
+    max-width: 460px;
+    padding: 25px;
+    gap: 20px;
+    border-radius: 20px;
+  }
+
+  .card-imagem {
+    height: 280px;
+    border-width: 5px;
+    border-radius: 15px;
+  }
+
+  .nome-maq {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+  }
+
+  .car-maq {
+    gap: 12px;
+  }
+
+  .car-maq li {
+    padding: 12px 18px;
+    font-size: 1.3em;
+    border-radius: 10px;
+  }
+
+  .valor {
+    font-size: 38px;
+    margin-top: 15px;
+  }
+}
