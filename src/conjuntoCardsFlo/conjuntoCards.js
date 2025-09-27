@@ -5,12 +5,12 @@ import "./conjuntoCards.css";
 
 const todasAsMaquinas = [
   {
-    nome: "Máquina A",
-    imagem: "assets/RETRO.png",
-    caracteristica1: "lindo",
-    caracteristica2: "lindo",
-    caracteristica3: "lindo",
-    valor: "19,90",
+    nome: "Volvo L110F - 2011",
+    imagem: "assets/volvo L11.jpeg",
+    caracteristica1: "30.000 horas",
+    caracteristica2: "Revisões em dia",
+    caracteristica3: "Garra frontal de carregamento  ",
+    valor: "450.000,00",
   },
   {
     nome: "Máquina B",
