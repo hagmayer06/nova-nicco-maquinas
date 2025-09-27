@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
+
+.foto img {
+    border-radius: 20px;
+    border: solid 2px rgb(255, 170, 0)
+}
+
+.historia {
+    margin-bottom: 10px;
+}
+.historia h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 50px;
+    margin-right: 150px;
+    color: rgb(255, 170, 0);
+}
+
+.texto {
+    font-size: 13px;
+}
+.impacto {
+    color:rgb(255, 170, 0);
+}

@@ -30,7 +30,7 @@
 
 /* Estilo para o título "Bem vindo" */
 .bv {
-  font-size: 2.5em;
+  font-size: 3rem;
   font-family: 'Bebas Neue', sans-serif; 
   color:rgb(255, 170, 0); 
   margin-bottom: 0px; 
@@ -57,7 +57,7 @@
 
 /* Estilo para o título "Nicco Máquinas" */
 .nm {
-  font-size: 2.5em; /* Tamanho ainda maior para o nome da empresa */
+  font-size: 3rem; /* Tamanho ainda maior para o nome da empresa */
   font-family: 'Bebas Neue', sans-serif; /* Mesma fonte principal */
   color: rgb(255, 170, 0); /* Amarelo ouro */
   margin-bottom: px; /* Mais espaço abaixo */
@@ -85,7 +85,7 @@
 
 /* Estilo para o parágrafo de descrição */
 .p {
-  font-size: 0.8em; /* Tamanho legível para o parágrafo */
+  font-size: 1em; /* Tamanho legível para o parágrafo */
   line-height: 1.5; /* Espaçamento entre linhas para melhor leitura */
   color: #cccccc; /* Um tom de cinza mais claro para o parágrafo */
   white-space: nowrap;

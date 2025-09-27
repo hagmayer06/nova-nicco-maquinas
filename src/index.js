@@ -10,6 +10,7 @@ import ConjuntoE from "./conjuntoCardsEsca/conjuntoCards";
 import ConjuntoR from "./conjuntoCardsRetro/conjuntoR";
 import ConjuntoP from "./conjuntoCardsPáC/conjuntoP";
 import Footer from "./rodapé/rodapé";
+import Vendedor from "./vendedor/vendedor"
 
 
 
@@ -25,7 +26,9 @@ root.render(
     <ConjuntoE/>
     <ConjuntoR />
     <ConjuntoP />
+    <Vendedor />
     <Footer />
+    
 
     
 

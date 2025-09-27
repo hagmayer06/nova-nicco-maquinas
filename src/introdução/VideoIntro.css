@@ -10,4 +10,5 @@
   display: block; /* Garante que a tag de vídeo se comporte como um bloco */
   border-radius: 20px;
   border: 2px solid rgb(255, 170, 0);
+  width: 300px;
 }
