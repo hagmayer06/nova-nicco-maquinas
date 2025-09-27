@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
 
 #nav-maq{
-    background-color: rgb(255, 170, 0);
+    background-image: radial-gradient(circle, rgb(255, 170, 0),rgb(250, 152, 6));
     padding: 10px;
 }
 .h1 {
