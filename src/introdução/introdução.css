@@ -1,466 +1,323 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;700&display=swap");
 
-/* Reset básico e estilização geral */
+/* ===== RESET E VARIÁVEIS ===== */
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  box-shadow: black 2px 2px 2px;
+:root {
+  --cor-primaria: #2a2a2a;
+  --cor-destaque: rgb(255, 170, 0);
+  --cor-texto: #ffffff;
+  --cor-texto-secundario: #cccccc;
+  --font-principal: "Bebas Neue", sans-serif;
+  --font-secundaria: "Montserrat", sans-serif;
 }
-/* Estilo para o container principal do componente "Introdução" */
+
+/* ===== COMPONENTE PRINCIPAL - MOBILE FIRST ===== */
 .pai {
-  display: flex; /* Transforma o container em um flex container */
-  justify-content: space-between; /* Distribui os itens filhos com espaço entre eles */
-  align-items: center; /* Alinha os itens filhos verticalmente ao centro */
-  padding: 50px 80px; /* Adiciona espaço interno (superior/inferior, esquerdo/direito) */
-  background-color: #2a2a2a; /* Cor de fundo cinza escuro */
-  min-height: 80vh; /* Garante que o container ocupe pelo menos 80% da altura da viewport */
-  color: #ffffff; /* Cor do texto padrão branca */
-  font-family: "Montserrat", sans-serif; /* Fonte secundária para textos gerais */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: var(--cor-primaria);
+  min-height: 100vh;
+  color: var(--cor-texto);
+  font-family: var(--font-secundaria);
+  gap: 2rem;
 }
 
-/* Estilo para o bloco de texto (Bem vindo, Nicco Máquinas, etc.) */
+/* ===== CONTAINER DE CONTEÚDO ===== */
 .pai > div:first-child {
-  /* Seleciona o primeiro filho direto de .pai */
-  flex: 1; /* Permite que este bloco ocupe o espaço disponível */
-  margin-right: 40px; /* Espaço à direita do bloco de texto */
+  order: 1;
+  width: 100%;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column; /* Títulos sempre em coluna */
 }
 
-/* Estilo para o título completo "Bem vindo à Nicco Máquinas" */
-.titulo-completo {
-  font-size: 3.5em; /* Aumentei significativamente o tamanho */
-  font-family: "Bebas Neue", sans-serif;
-  color: rgb(255, 170, 0);
-  margin-bottom: 15px;
-  line-height: 1.1;
-  display: block;
-  animation-name: deslizarParaDireita;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-
-/* Estilo para o título "Bem vindo" - MANTIDO PARA COMPATIBILIDADE */
-.bv {
-  font-size: 3rem;
-  font-family: 'Bebas Neue', sans-serif; 
-  color:rgb(255, 170, 0); 
-  margin-bottom: 10px; 
-  line-height: 1; 
-  display: block;
-  animation-name: deslizarParaDireita;
-  animation-duration: 2s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-@keyframes deslizarParaDireita {
-  0% {
-    /* Começa 500px à esquerda da posição final */
-    transform: translateX(-500px);
-    opacity: 0;
-  }
-
-  100% {
-    /* Para 50px à direita da sua posição original */
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-/* Estilo para o título "Nicco Máquinas" */
-.nm {
-  font-size: 3rem; /* Tamanho ainda maior para o nome da empresa */
-  font-family: 'Bebas Neue', sans-serif; /* Mesma fonte principal */
-  color: rgb(255, 170, 0); /* Amarelo ouro */
-  margin-bottom: 15px; /* Mais espaço abaixo */
-  line-height: 1;
-  display: block; /* Força quebra de linha */
-  animation-name: deslizarParaDireita;
-  animation-duration: 6s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-}
-@keyframes deslizarParaDireita {
-  0% {
-    /* Começa 500px à esquerda da posição final */
-    transform: translateX(-500px);
-    opacity: 0;
-  }
-
-  100% {
-    /* Para 50px à direita da sua posição original */
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-/* Estilo para o parágrafo de descrição - AUMENTADO */
-.p {
-  font-size: 1.8em; /* Tamanho muito maior para o parágrafo */
-  line-height: 1.6; /* Espaçamento entre linhas para melhor leitura */
-  color: #cccccc; /* Um tom de cinza mais claro para o parágrafo */
-  white-space: normal; /* Permitir quebra de linha */
-  font-weight: 500; /* Peso da fonte um pouco maior */
-  max-width: 600px; /* Limitar largura para melhor leitura */
-}
-
-/* Destaque amarelo para "Pensou Máquina" */
-.destaque-amarelo {
-  color: rgb(255, 170, 0); /* Amarelo ouro igual aos títulos */
-  font-weight: 700; /* Negrito para destaque */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra sutil */
-}
-
-/* Estilo para o container da imagem */
 .img {
-  flex-shrink: 0; /* Impede que a imagem encolha se o espaço ficar apertado */
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Estilo para a imagem de fundo */
-.img img {
-  width: 250px; /* Tamanho da imagem */
-  height: auto;
-  display: block; /* Remove o espaço extra abaixo da imagem */
-  border: 2px solid rgb(255, 170, 0);
-  border-radius: 20px;
-  margin-right: 5px;
-  box-shadow: black 2px 2px 10px;
+/* ===== TIPOGRAFIA ===== */
+.titulo-completo {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-family: var(--font-principal);
+  color: var(--cor-destaque);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  display: block; /* Força quebra de linha */
+  width: 100%; /* Ocupa toda a largura disponível */
+  animation: deslizarParaDireita 2s ease-out forwards;
 }
 
-@media screen and (max-width: 599px) {
+.bv {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-family: var(--font-principal);
+  color: var(--cor-destaque);
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  display: block; /* Força quebra de linha */
+  width: 100%; /* Ocupa toda a largura disponível */
+  animation: deslizarParaDireita 2s ease-out forwards;
+}
+
+.nm {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-family: var(--font-principal);
+  color: var(--cor-destaque);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  display: block; /* Força quebra de linha */
+  width: 100%; /* Ocupa toda a largura disponível */
+  animation: deslizarParaDireita 3s ease-out forwards;
+}
+
+.p {
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  line-height: 1.6;
+  color: var(--cor-texto-secundario);
+  font-weight: 500;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.destaque-amarelo {
+  color: var(--cor-destaque);
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== ANIMAÇÃO ===== */
+@keyframes deslizarParaDireita {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ===== RESPONSIVIDADE PROGRESSIVA ===== */
+
+/* Tablets pequenos e celulares em paisagem */
+@media (min-width: 480px) {
   .pai {
-    display: flex; /* Transforma o container em um flex container */
-    justify-content: space-between; /* Distribui os itens filhos com espaço entre eles */
-    align-items: center; /* Alinha os itens filhos verticalmente ao centro */
-    padding: 50px 10%; /* Adiciona espaço interno (superior/inferior, esquerdo/direito) */
-    background-color: #2a2a2a; /* Cor de fundo cinza escuro */
-    min-height: 80vh; /* Garante que o container ocupe pelo menos 80% da altura da viewport */
-    color: #ffffff; /* Cor do texto padrão branca */
-    font-family: "Montserrat", sans-serif; /* Fonte secundária para textos gerais */
+    padding: 3rem 1.5rem;
+    gap: 2.5rem;
   }
 
-  .img img {
-    width: 200px; /* Tamanho da imagem */
-    height: auto;
-    display: block; /* Remove o espaço extra abaixo da imagem */
-    border: 1px solid rgb(255, 170, 0);
-    border-radius: 20px;
-    margin-right: 5px;
+  .pai > div:first-child {
+    max-width: 85%;
   }
 
-  .bv {
-    font-size: 250%; /* Tamanho grande para o título principal */
-    font-family: "Bebas Neue", sans-serif; /* Fonte principal para títulos */
-    color: rgb(255, 170, 0); /* Amarelo ouro para destacar */
-    margin-bottom: 5px; /* Espaço abaixo do título */
-    line-height: 0.9; /* Espaçamento entre linhas do H1 */
-  }
-
-  /* Estilo para o título "Nicco Máquinas" */
+  .titulo-completo,
+  .bv,
   .nm {
-    font-size: 250%; /* Tamanho ainda maior para o nome da empresa */
-    font-family: "Bebas Neue", sans-serif; /* Mesma fonte principal */
-    color: rgb(255, 170, 0); /* Amarelo ouro */
-    margin-bottom: 2px; /* Mais espaço abaixo */
-    line-height: 1;
+    font-size: clamp(2rem, 6vw, 3rem);
   }
 
-  /* Estilo para o parágrafo de descrição */
   .p {
-    font-size: 80%; /* Tamanho legível para o parágrafo */
-    line-height: 1.5; /* Espaçamento entre linhas para melhor leitura */
-    color: #cccccc; /* Um tom de cinza mais claro para o parágrafo */
+    font-size: clamp(1rem, 3vw, 1.2rem);
   }
 }
 
-@media screen and (max-width: 600px) {
+/* Tablets */
+@media (min-width: 768px) {
   .pai {
-    display: flex; /* Transforma o container em um flex container */
-    justify-content: space-between; /* Distribui os itens filhos com espaço entre eles */
-    align-items: center; /* Alinha os itens filhos verticalmente ao centro */
-    padding: 50px 15%; /* Adiciona espaço interno (superior/inferior, esquerdo/direito) */
-    background-color: #2a2a2a; /* Cor de fundo cinza escuro */
-    min-height: 80vh; /* Garante que o container ocupe pelo menos 80% da altura da viewport */
-    color: #ffffff; /* Cor do texto padrão branca */
-    font-family: "Montserrat", sans-serif; /* Fonte secundária para textos gerais */
+    flex-direction: row;
+    text-align: left;
+    padding: 4rem 2rem;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .img img {
-    width: 190px; /* Tamanho da imagem */
-    height: auto;
-    display: block; /* Remove o espaço extra abaixo da imagem */
-    border: 1px solid rgb(255, 170, 0);
-    border-radius: 20px;
-    margin-right: 5px;
+  .pai > div:first-child {
+    order: 1;
+    flex: 1;
+    min-width: 0; /* Permite que o texto se quebre corretamente */
+    max-width: 60%; /* Garante espaço mínimo para o texto */
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column; /* Mantém títulos em coluna mesmo no layout horizontal */
   }
 
-  .bv {
-    font-size: 230%; /* Tamanho grande para o título principal */
-    font-family: "Bebas Neue", sans-serif; /* Fonte principal para títulos */
-    color: rgb(255, 170, 0); /* Amarelo ouro para destacar */
-    margin-bottom: 5px; /* Espaço abaixo do título */
-    line-height: 0.9; /* Espaçamento entre linhas do H1 */
+  .img {
+    order: 2;
+    flex: 0 0 auto; /* Não cresce, não encolhe, tamanho automático */
+    max-width: 35%; /* Limita o tamanho máximo do vídeo */
+    min-width: 280px; /* Tamanho mínimo do vídeo */
   }
 
-  /* Estilo para o título "Nicco Máquinas" */
+  .titulo-completo,
+  .bv,
   .nm {
-    font-size: 230%; /* Tamanho ainda maior para o nome da empresa */
-    font-family: "Bebas Neue", sans-serif; /* Mesma fonte principal */
-    color: rgb(255, 170, 0); /* Amarelo ouro */
-    margin-bottom: 2px; /* Mais espaço abaixo */
-    line-height: 1;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
   }
 
-  /* Estilo para o parágrafo de descrição */
   .p {
-    font-size: 70%; /* Tamanho legível para o parágrafo */
-    line-height: 1.5; /* Espaçamento entre linhas para melhor leitura */
-    color: #cccccc; /* Um tom de cinza mais claro para o parágrafo */
-  }
-}
-@media screen and (max-width: 504px) {
-  .pai {
-    display: flex; /* Transforma o container em um flex container */
-    justify-content: space-between; /* Distribui os itens filhos com espaço entre eles */
-    align-items: center; /* Alinha os itens filhos verticalmente ao centro */
-    padding: 50px 10%; /* Adiciona espaço interno (superior/inferior, esquerdo/direito) */
-    background-color: #2a2a2a; /* Cor de fundo cinza escuro */
-    min-height: 80vh; /* Garante que o container ocupe pelo menos 80% da altura da viewport */
-    color: #ffffff; /* Cor do texto padrão branca */
-    font-family: "Montserrat", sans-serif; /* Fonte secundária para textos gerais */
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    max-width: 600px;
   }
 }
 
-@media screen and (max-width: 473px) {
+/* Desktop pequeno */
+@media (min-width: 1024px) {
   .pai {
-    display: flex; /* Transforma o container em um flex container */
-    justify-content: space-between; /* Distribui os itens filhos com espaço entre eles */
-    align-items: center; /* Alinha os itens filhos verticalmente ao centro */
-    padding: 50px 10%; /* Adiciona espaço interno (superior/inferior, esquerdo/direito) */
-    background-color: #2a2a2a; /* Cor de fundo cinza escuro */
-    min-height: 80vh; /* Garante que o container ocupe pelo menos 80% da altura da viewport */
-    color: #ffffff; /* Cor do texto padrão branca */
-    font-family: "Montserrat", sans-serif; /* Fonte secundária para textos gerais */
-  }
-  .img img {
-    width: 170px; /* Tamanho da imagem */
-    height: auto;
-    display: block; /* Remove o espaço extra abaixo da imagem */
-    border: 1px solid yellow;
-    border-radius: 20px;
-    margin-right: 5px;
-  }
-
-  .bv {
-    font-size: 200%; /* Tamanho grande para o título principal */
-    font-family: "Bebas Neue", sans-serif; /* Fonte principal para títulos */
-    color: #ffd700; /* Amarelo ouro para destacar */
-    margin-bottom: 5px; /* Espaço abaixo do título */
-    line-height: 0.9; /* Espaçamento entre linhas do H1 */
-  }
-
-  /* Estilo para o título "Nicco Máquinas" */
-  .nm {
-    font-size: 200%; /* Tamanho ainda maior para o nome da empresa */
-    font-family: "Bebas Neue", sans-serif; /* Mesma fonte principal */
-    color: #ffd700; /* Amarelo ouro */
-    margin-bottom: 2px; /* Mais espaço abaixo */
-    line-height: 1;
-  }
-
-  /* Estilo para o parágrafo de descrição */
-  .p {
-    font-size: 60%; /* Tamanho legível para o parágrafo */
-    line-height: 1.5; /* Espaçamento entre linhas para melhor leitura */
-    color: #cccccc; /* Um tom de cinza mais claro para o parágrafo */
-  }
-}
-
-@media screen and (max-width: 436px) {
-  .pai {
-    display: grid;
-
-    padding: 50px 10%; /* Adiciona espaço interno (superior/inferior, esquerdo/direito) */
-    background-color: #2a2a2a; /* Cor de fundo cinza escuro */
-    min-height: 80vh; /* Garante que o container ocupe pelo menos 80% da altura da viewport */
-    color: #ffffff; /* Cor do texto padrão branca */
-    font-family: "Montserrat", sans-serif; /* Fonte secundária para textos gerais */
-  }
-  .img img {
-    width: 170px; /* Tamanho da imagem */
-    height: auto;
-    display: block; /* Remove o espaço extra abaixo da imagem */
-    border: 1px solid yellow;
-    border-radius: 20px;
-    margin-right: 5px;
-  }
-
-  .bv {
-    font-size: 200%; /* Tamanho grande para o título principal */
-    font-family: "Bebas Neue", sans-serif; /* Fonte principal para títulos */
-    color: #ffd700; /* Amarelo ouro para destacar */
-    margin-bottom: 5px; /* Espaço abaixo do título */
-    line-height: 0.9; /* Espaçamento entre linhas do H1 */
-  }
-
-  /* Estilo para o título "Nicco Máquinas" */
-  .nm {
-    font-size: 200%; /* Tamanho ainda maior para o nome da empresa */
-    font-family: "Bebas Neue", sans-serif; /* Mesma fonte principal */
-    color: #ffd700; /* Amarelo ouro */
-    margin-bottom: 2px; /* Mais espaço abaixo */
-    line-height: 1;
-  }
-
-  /* Estilo para o parágrafo de descrição */
-  .p {
-    font-size: 60%; /* Tamanho legível para o parágrafo */
-    line-height: 1.5; /* Espaçamento entre linhas para melhor leitura */
-    color: #cccccc; /* Um tom de cinza mais claro para o parágrafo */
-  }
-}
-
-/* Responsividade para Telas Grandes - Introdução */
-@media (min-width: 1200px) {
-  .pai {
-    padding: 60px 100px;
+    padding: 5rem 4rem;
     min-height: 85vh;
   }
 
   .pai > div:first-child {
-    margin-right: 60px;
+    max-width: 55%; /* Mais espaço para o texto */
+    display: flex;
+    flex-direction: column;
   }
 
-  .titulo-completo {
-    font-size: 4.2em; /* Maior que antes */
+  .img {
+    max-width: 40%;
+    min-width: 320px;
   }
 
-  .bv {
-    font-size: 3em;
-  }
-
+  .titulo-completo,
+  .bv,
   .nm {
-    font-size: 3.5em;
+    font-size: clamp(3rem, 4vw, 4rem);
   }
 
   .p {
-    font-size: 2.1em;
-    max-width: 500px;
-  }
-
-  .img img {
-    width: 220px;
-    border-radius: 25px;
+    font-size: clamp(1.3rem, 2vw, 1.6rem);
   }
 }
 
-@media (min-width: 1400px) {
+/* Desktop médio */
+@media (min-width: 1200px) {
   .pai {
-    padding: 80px 120px;
+    padding: 6rem 6rem;
     min-height: 90vh;
   }
 
   .pai > div:first-child {
-    margin-right: 80px;
+    margin-right: 4rem;
+    max-width: 50%; /* Equilibra melhor o espaço */
+    display: flex;
+    flex-direction: column;
   }
 
-  .titulo-completo {
-    font-size: 4.8em; /* Ainda maior */
+  .img {
+    max-width: 45%;
+    min-width: 380px;
   }
 
-  .bv {
-    font-size: 3.5em;
-  }
-
+  .titulo-completo,
+  .bv,
   .nm {
-    font-size: 4em;
+    font-size: clamp(3.5rem, 4vw, 4.5rem);
   }
 
   .p {
-    font-size: 2.2em;
-    max-width: 600px;
-  }
-
-  .img img {
-    width: 280px;
-    border-radius: 30px;
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    max-width: 650px;
   }
 }
 
-@media (min-width: 1920px) {
+/* Desktop grande */
+@media (min-width: 1440px) {
   .pai {
-    padding: 100px 150px;
+    padding: 7rem 8rem;
     min-height: 95vh;
   }
 
   .pai > div:first-child {
-    margin-right: 100px;
+    margin-right: 5rem;
+    max-width: 55%;
+    display: flex;
+    flex-direction: column;
   }
 
-  .titulo-completo {
-    font-size: 5.5em; /* Muito maior para telas grandes */
-    margin-bottom: 15px;
+  .img {
+    max-width: 40%;
+    min-width: 420px;
   }
 
-  .bv {
-    font-size: 4em;
-    margin-bottom: 10px;
-  }
-
+  .titulo-completo,
+  .bv,
   .nm {
-    font-size: 4.5em;
-    margin-bottom: 15px;
+    font-size: clamp(4rem, 4vw, 5rem);
   }
 
   .p {
-    font-size: 2.4em;
+    font-size: clamp(1.6rem, 2vw, 2rem);
     max-width: 700px;
-    line-height: 1.6;
-  }
-
-  .img img {
-    width: 350px;
-    border-radius: 35px;
-    border-width: 2px;
   }
 }
 
-@media (min-width: 2560px) {
+/* Telas Ultra-wide e 4K */
+@media (min-width: 1920px) {
   .pai {
-    padding: 120px 200px;
+    padding: 8rem 10rem;
     min-height: 100vh;
   }
 
   .pai > div:first-child {
-    margin-right: 120px;
+    margin-right: 6rem;
+    max-width: 60%;
+    display: flex;
+    flex-direction: column;
   }
 
-  .titulo-completo {
-    font-size: 6.5em; /* Tamanho máximo para 4K+ */
-    margin-bottom: 20px;
+  .img {
+    max-width: 35%;
+    min-width: 500px;
   }
 
-  .bv {
-    font-size: 5em;
-    margin-bottom: 15px;
-  }
-
+  .titulo-completo,
+  .bv,
   .nm {
-    font-size: 5.5em;
-    margin-bottom: 20px;
+    font-size: clamp(5rem, 5vw, 6rem);
   }
 
   .p {
-    font-size: 2.6em;
+    font-size: clamp(1.8rem, 2.5vw, 2.4rem);
     max-width: 800px;
-    line-height: 1.8;
+  }
+}
+
+/* 4K+ */
+@media (min-width: 2560px) {
+  .pai {
+    padding: 10rem 12rem;
   }
 
-  .img img {
-    width: 450px;
-    border-radius: 40px;
-    border-width: 3px;
+  .pai > div:first-child {
+    max-width: 65%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img {
+    max-width: 30%;
+    min-width: 600px;
+  }
+
+  .titulo-completo,
+  .bv,
+  .nm {
+    font-size: clamp(6rem, 6vw, 7rem);
+  }
+
+  .p {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    max-width: 900px;
   }
 }

@@ -1,13 +1,10 @@
-/* Video Container Responsivo - TAMANHO MODERADO */
+/* Video Container Responsivo - TAMANHO CONTROLADO */
 .video-container {
-  max-width: 550px;
+  max-width: 100%;
+  width: 100%;
   margin: 0;
   padding: 10px;
-  width: 100%;
   box-sizing: border-box;
-}
-
-.video-container {
   position: relative;
 }
 
@@ -34,80 +31,126 @@
   pointer-events: none;
 }
 
-/* Responsividade para Telas Grandes - Video MODERADO */
-@media (min-width: 1200px) {
+/* Desktop - O container pai já controla o tamanho */
+@media (min-width: 768px) {
   .video-container {
-    max-width: 720px;
-    padding: 15px;
+    padding: clamp(10px, 1.5vw, 20px);
   }
 
   .video-container video {
-    border-radius: 25px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-  }
-
-  /* Ajustar máscara para telas maiores */
-  .video-container::after {
-    width: 50px;
-    height: 25px;
-    top: 15px;
-    right: 15px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .video-container {
-    max-width: 900px;
-    padding: 20px;
-  }
-
-  .video-container video {
-    border-radius: 30px;
-    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
+    border-radius: clamp(15px, 2vw, 30px);
+    box-shadow: 0 clamp(8px, 1vw, 15px) clamp(24px, 3vw, 60px)
+      rgba(0, 0, 0, 0.4);
   }
 
   .video-container::after {
-    width: 60px;
-    height: 30px;
-    top: 20px;
-    right: 20px;
+    width: clamp(30px, 4vw, 60px);
+    height: clamp(15px, 2vw, 30px);
+    top: clamp(10px, 1.5vw, 20px);
+    right: clamp(10px, 1.5vw, 20px);
   }
 }
 
+/* Telas muito grandes */
 @media (min-width: 1920px) {
   .video-container {
-    max-width: 1080px;
-    padding: 25px;
+    padding: clamp(20px, 2vw, 30px);
   }
 
   .video-container video {
-    border-radius: 35px;
-    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.7);
+    border-radius: clamp(25px, 2.5vw, 40px);
+    box-shadow: 0 clamp(12px, 1.5vw, 20px) clamp(36px, 4vw, 80px)
+      rgba(0, 0, 0, 0.5);
   }
 
   .video-container::after {
-    width: 75px;
-    height: 37px;
-    top: 25px;
-    right: 25px;
+    width: clamp(50px, 5vw, 100px);
+    height: clamp(25px, 2.5vw, 50px);
+    top: clamp(20px, 2vw, 30px);
+    right: clamp(20px, 2vw, 30px);
   }
 }
 
-@media (min-width: 2560px) {
+/* Responsividade para Tablets */
+@media (max-width: 768px) {
   .video-container {
-    max-width: 1400px;
-    padding: 30px;
+    max-width: 350px;
+    padding: 6px;
+    margin: 0 auto;
   }
 
   .video-container video {
-    border-radius: 40px;
-    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
   }
 
   .video-container::after {
-    width: 100px;
-    height: 50px;
-    top: 30px;
-    right: 30px;
+    width: 30px;
+    height: 15px;
+    top: 6px;
+    right: 6px;
+  }
+}
+
+/* Responsividade para Telas Pequenas */
+@media (max-width: 600px) {
+  .video-container {
+    max-width: 280px;
+    padding: 5px;
+    margin: 0 auto;
+  }
+
+  .video-container video {
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  }
+
+  .video-container::after {
+    width: 25px;
+    height: 12px;
+    top: 5px;
+    right: 5px;
+  }
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 480px) {
+  .video-container {
+    max-width: 240px;
+    padding: 4px;
+    margin: 0 auto;
+  }
+
+  .video-container video {
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .video-container::after {
+    width: 20px;
+    height: 10px;
+    top: 4px;
+    right: 4px;
+  }
+}
+
+/* Responsividade para Celulares Muito Pequenos */
+@media (max-width: 360px) {
+  .video-container {
+    max-width: 200px;
+    padding: 3px;
+    margin: 0 auto;
+  }
+
+  .video-container video {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .video-container::after {
+    width: 18px;
+    height: 9px;
+    top: 3px;
+    right: 3px;
   }
 }

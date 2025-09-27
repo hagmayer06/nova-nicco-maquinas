@@ -19,7 +19,7 @@ export default function Introdução() {
           </p>
         </div>
       </div>
-      <div class="img">
+      <div className="img">
         <VideoIntro />
       </div>
     </div>

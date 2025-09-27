@@ -9,7 +9,7 @@ import ConjuntoE from "./conjuntoCardsEsca/conjuntoCards";
 import ConjuntoR from "./conjuntoCardsRetro/conjuntoR";
 import ConjuntoP from "./conjuntoCardsPáC/conjuntoP";
 import Footer from "./rodapé/rodapé";
-import Vendedor from "./vendedor/vendedor"
+import Vendedor from "./vendedor/vendedor";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
