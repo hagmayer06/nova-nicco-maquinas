@@ -25,6 +25,8 @@
   padding: 0 20px;
   position: relative;
   z-index: 2;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Seção principal do footer */
@@ -33,6 +35,8 @@
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 40px;
   margin-bottom: 40px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .footer-section h3,
@@ -264,6 +268,202 @@
   .social-link {
     padding: 8px 12px;
     font-size: 14px;
+  }
+}
+
+/* Responsividade para Telas Grandes (TVs/Monitores) */
+@media (min-width: 1200px) {
+  .footer-container {
+    max-width: 1400px;
+    padding: 0 40px;
+  }
+
+  .footer-main {
+    gap: 60px;
+  }
+
+  .footer-section h3 {
+    font-size: 32px;
+  }
+
+  .footer-section h4 {
+    font-size: 20px;
+  }
+
+  .footer-logo p {
+    font-size: 18px;
+    max-width: 350px;
+  }
+
+  .footer-section li {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  .social-link {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .footer-container {
+    max-width: 1600px;
+    padding: 0 60px;
+  }
+
+  .footer {
+    padding: 80px 0 30px;
+  }
+
+  .footer-main {
+    gap: 80px;
+    margin-bottom: 60px;
+  }
+
+  .footer-section h3 {
+    font-size: 36px;
+  }
+
+  .footer-section h4 {
+    font-size: 22px;
+  }
+
+  .footer-logo p {
+    font-size: 20px;
+    max-width: 400px;
+  }
+
+  .footer-section li {
+    font-size: 18px;
+    padding: 12px 0;
+  }
+
+  .social-link {
+    padding: 14px 24px;
+    font-size: 18px;
+  }
+}
+
+/* Para TVs e Monitores Ultra-Wide (1920px+) */
+@media (min-width: 1920px) {
+  .footer-container {
+    max-width: 1800px;
+    padding: 0 80px;
+  }
+
+  .footer {
+    padding: 100px 0 40px;
+  }
+
+  .footer-main {
+    gap: 100px;
+    margin-bottom: 80px;
+  }
+
+  .footer-section h3 {
+    font-size: 42px;
+  }
+
+  .footer-section h4 {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+  .footer-section h4::after {
+    width: 40px;
+    height: 3px;
+  }
+
+  .footer-logo p {
+    font-size: 22px;
+    max-width: 450px;
+    line-height: 1.8;
+  }
+
+  .footer-section li {
+    font-size: 20px;
+    padding: 14px 0;
+  }
+
+  .social-links {
+    gap: 15px;
+  }
+
+  .social-link {
+    padding: 16px 28px;
+    font-size: 20px;
+    border-radius: 30px;
+  }
+
+  .footer-bottom {
+    padding-top: 30px;
+  }
+
+  .footer-copyright p,
+  .footer-developer p {
+    font-size: 16px;
+  }
+}
+
+/* Para Monitores 4K e superiores (2560px+) */
+@media (min-width: 2560px) {
+  .footer-container {
+    max-width: 2200px;
+    padding: 0 100px;
+  }
+
+  .footer {
+    padding: 120px 0 50px;
+  }
+
+  .footer-main {
+    gap: 120px;
+    margin-bottom: 100px;
+  }
+
+  .footer-section h3 {
+    font-size: 48px;
+  }
+
+  .footer-section h4 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .footer-section h4::after {
+    width: 50px;
+    height: 4px;
+  }
+
+  .footer-logo p {
+    font-size: 26px;
+    max-width: 500px;
+    line-height: 2;
+  }
+
+  .footer-section li {
+    font-size: 24px;
+    padding: 16px 0;
+  }
+
+  .social-links {
+    gap: 20px;
+  }
+
+  .social-link {
+    padding: 20px 35px;
+    font-size: 24px;
+    border-radius: 35px;
+  }
+
+  .footer-bottom {
+    padding-top: 40px;
+  }
+
+  .footer-copyright p,
+  .footer-developer p {
+    font-size: 18px;
   }
 }
 

@@ -1,13 +1,113 @@
-/* Adicione esta classe ao seu arquivo CSS */
+/* Video Container Responsivo - TAMANHO MODERADO */
 .video-container {
-  max-width: 300px; /* Limita o tamanho máximo do vídeo */
-  margin: 0 auto;   /* Centraliza o container na página */
-  padding: 20px;
-  
+  max-width: 550px;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.video-container {
+  position: relative;
 }
 
 .video-container video {
-  display: block; /* Garante que a tag de vídeo se comporte como um bloco */
+  display: block;
   border-radius: 20px;
-  border: 2px solid rgb(255, 170, 0);
+  border: none;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Máscara para ocultar logo VEO */
+.video-container::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 20px;
+  background: #2a2a2a;
+  border-radius: 5px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Responsividade para Telas Grandes - Video MODERADO */
+@media (min-width: 1200px) {
+  .video-container {
+    max-width: 720px;
+    padding: 15px;
+  }
+
+  .video-container video {
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Ajustar máscara para telas maiores */
+  .video-container::after {
+    width: 50px;
+    height: 25px;
+    top: 15px;
+    right: 15px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .video-container {
+    max-width: 900px;
+    padding: 20px;
+  }
+
+  .video-container video {
+    border-radius: 30px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
+  }
+
+  .video-container::after {
+    width: 60px;
+    height: 30px;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .video-container {
+    max-width: 1080px;
+    padding: 25px;
+  }
+
+  .video-container video {
+    border-radius: 35px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.7);
+  }
+
+  .video-container::after {
+    width: 75px;
+    height: 37px;
+    top: 25px;
+    right: 25px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .video-container {
+    max-width: 1400px;
+    padding: 30px;
+  }
+
+  .video-container video {
+    border-radius: 40px;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.8);
+  }
+
+  .video-container::after {
+    width: 100px;
+    height: 50px;
+    top: 30px;
+    right: 30px;
+  }
 }

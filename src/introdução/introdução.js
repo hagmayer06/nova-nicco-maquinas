@@ -1,4 +1,4 @@
-import './introdução.css'
+import "./introdução.css";
 import VideoIntro from "./VideoIntro";
 
 export default function Introdução() {
@@ -6,22 +6,21 @@ export default function Introdução() {
     <div className="pai">
       <div>
         <div>
-          <h1 className="bv">Bem vindo</h1>
-          <h1 className='nm'>Nicco Máquinas</h1>
+          <h1 className="titulo-completo">Bem vindo à Nicco Máquinas</h1>
         </div>
         <div>
-          <p className='p'>
+          <p className="p">
             Seu projeto no ritmo certo!
             <br />
-            Máquinas selecionadas, entrega agil <br />
-            e suporte especializado.
+            Máquinas selecionadas, entrega ágil e suporte especializado.
             <br />
-            Pensou Máquina, pensou Nicco!
+            <span className="destaque-amarelo">Pensou Máquina</span>, pensou
+            Nicco!
           </p>
         </div>
       </div>
       <div class="img">
-        <VideoIntro/>
+        <VideoIntro />
       </div>
     </div>
   );

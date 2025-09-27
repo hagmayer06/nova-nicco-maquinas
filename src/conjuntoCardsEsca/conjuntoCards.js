@@ -94,23 +94,25 @@ export default function ConjuntoE() {
 
   return (
     <div className="fundo">
-        <Titulos id="Esca" titulo="Escavadeira"/>
       <div className="posiçãoE">
-        {todasAsMaquinas.slice(0, maquinasVisiveis).map((maquina, index) => (
-          <NavegaçãoMaquinas
-            key={index}
-            nome={maquina.nome}
-            imagem={maquina.imagem}
-            caracteristica1={maquina.caracteristica1}
-            caracteristica2={maquina.caracteristica2}
-            caracteristica3={maquina.caracteristica3}
-            valor={maquina.valor}
-          />
-        ))}
+        <Titulos id="Esca" titulo="Escavadeira" />
+        <div className="cards-container">
+          {todasAsMaquinas.slice(0, maquinasVisiveis).map((maquina, index) => (
+            <NavegaçãoMaquinas
+              key={index}
+              nome={maquina.nome}
+              imagem={maquina.imagem}
+              caracteristica1={maquina.caracteristica1}
+              caracteristica2={maquina.caracteristica2}
+              caracteristica3={maquina.caracteristica3}
+              valor={maquina.valor}
+            />
+          ))}
+        </div>
 
         <button onClick={handleButtonClick} className="mostrarMaisOuMenos">
           {maquinasVisiveis < todasAsMaquinas.length
-            ? "Mostrar Mais"
+            ? "Saiba Mais"
             : "Mostrar Menos"}
         </button>
       </div>
