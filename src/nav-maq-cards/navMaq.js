@@ -12,7 +12,7 @@ export default function CardMaq() {
               className="img-nav"
               src="/assets/FLORESTAL.png"
               alt=""
-              width="150px"
+              
             />
           </a>
         </div>
@@ -22,7 +22,7 @@ export default function CardMaq() {
               className="img-nav"
               src="/assets/escavadeira.png"
               alt=""
-              width="150px"
+              
             />
           </a>
         </div>
@@ -32,7 +32,7 @@ export default function CardMaq() {
               className="img-nav"
               src="/assets/RETRO.png"
               alt=""
-              width="150px"
+              
             />
           </a>
         </div>
@@ -42,7 +42,7 @@ export default function CardMaq() {
               className="img-nav"
               src="/assets/PÁCARRE.png"
               alt=""
-              width="150px"
+             
             />
           </a>
         </div>

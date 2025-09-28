@@ -1,28 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap");
 
+/* ================================================= */
+/* 1. ESTILOS BASE (MOBILE-FIRST - Largura Máxima de 575px) */
+/* ================================================= */
 #nav-maq {
   background-image: radial-gradient(circle, rgb(255, 170, 0), rgb(250, 152, 6));
   padding: 10px;
+  flex-wrap: nowrap; 
 }
 .h1 {
   color: rgb(0, 0, 0);
   font-family: "Bebas Neue", sans-serif;
+  /* Reduz o tamanho da fonte para o mobile */
+  font-size: 1.5em; 
+  padding: 10px;
   margin-top: 0;
   text-align: center;
   transition: all 0.3s ease;
   border-bottom: solid 3px black;
   border-radius: 6px;
 }
-.h1:hover {
-}
 .navmaq {
+  /* Permite que o Flexbox funcione */
   display: flex;
-  justify-content: space-between;
+  /* Garante que os itens quebrem a linha no mobile se necessário */
+  flex-wrap: wrap; 
+  /* Centraliza horizontalmente e verticalmente */
+  justify-content: center;
   place-items: center;
-  padding: 20px;
+  padding: 10px;
+  /* Espaçamento entre os itens */
+  gap: 15px; 
 }
 
 .img-nav {
+  /* Defina a largura inicial para mobile (menor) */
+  width: 80px; 
+  /* A altura deve ser auto para manter a proporção! */
+  height: auto; 
   border-radius: 20px;
   border: 2px solid rgb(0, 0, 0);
   box-shadow: black 4px 4px 12px;
@@ -30,11 +45,132 @@
 }
 
 .img-nav:hover {
-  width: 170px;
+  /* Aumenta a largura em 10px no hover do mobile */
+  width: 90px; 
   height: auto;
 }
 
-/* Responsividade para Telas Grandes - Navegação Máquinas */
+/* ================================================= */
+/* 2. MEDIA QUERY (TABLETS E DESKTOPS - Largura Mínima de 576px) */
+/* ================================================= */
+@media (min-width: 276px) {
+    #nav-maq {
+        padding: 10px 10px;
+        
+    }
+
+    .h1 {
+        /* Aumenta o tamanho da fonte para desktop */
+        font-size: 2.2em;
+        padding: 15px;
+    }
+
+    .navmaq { 
+        padding: 30px;
+        gap: 20px;
+        /* Garante que não quebre a linha em desktop, se houver espaço */
+    }
+
+    .img-nav {
+        /* AUMENTA A LARGURA: Sobrescreve o 80px do mobile */
+        width: 120px; 
+        border-radius: 25px;
+        border-width: 3px;
+        /* Garantindo que a altura seja auto */
+        height: auto;
+    }
+
+    .img-nav:hover {
+        /* AUMENTA A LARGURA: Sobrescreve o 90px do mobile para 110px */
+        width: 110px; 
+    }
+}
+@media (min-width: 576px) {
+    #nav-maq {
+        padding: 10px 10px;
+        flex-wrap: nowrap; 
+    }
+
+    .h1 {
+        /* Aumenta o tamanho da fonte para desktop */
+        font-size: 2.2em;
+        padding: 15px;
+    }
+
+    .navmaq { 
+        justify-content: space-between;
+        padding: 30px;
+        gap: 40px;
+        /* Garante que não quebre a linha em desktop, se houver espaço */
+    }
+
+    .img-nav {
+        /* AUMENTA A LARGURA: Sobrescreve o 80px do mobile */
+        width: 120px; 
+        border-radius: 25px;
+        border-width: 3px;
+        /* Garantindo que a altura seja auto */
+        height: auto;
+    }
+
+    .img-nav:hover {
+        /* AUMENTA A LARGURA: Sobrescreve o 90px do mobile para 110px */
+        width: 110px; 
+    }
+}
+@media (min-width: 768px) {
+    #nav-maq {
+    padding: 15px 40px;
+  }
+
+  .h1 {
+    font-size: 2.2em;
+    padding: 15px;
+  }
+
+  .navmaq {
+    padding: 30px;
+    gap: 30px;
+  }
+
+  .img-nav {
+    width: 160px;
+    border-radius: 25px;
+    border-width: 3px;
+    width: 150px;
+  }
+
+  .img-nav:hover {
+    width: 110px;
+  }
+} 
+@media (min-width: 992px) {
+    #nav-maq {
+    padding: 15px 60px;
+  }
+
+  .h1 {
+    font-size: 2.2em;
+    padding: 15px;
+  }
+
+  .navmaq {
+    padding: 30px;
+    gap: 10px;
+  }
+
+  .img-nav {
+    width: 160px;
+    border-radius: 25px;
+    border-width: 3px;
+    width: 180px;
+  }
+
+  .img-nav:hover {
+    width: 110px;
+  }
+} 
+
 @media (min-width: 1200px) {
   #nav-maq {
     padding: 15px 40px;
@@ -47,17 +183,18 @@
 
   .navmaq {
     padding: 30px;
-    gap: 20px;
+    gap: 10px;
   }
 
   .img-nav {
     width: 160px;
     border-radius: 25px;
     border-width: 3px;
+    width: 200px;
   }
 
   .img-nav:hover {
-    width: 200px;
+    width: 110px;
   }
 }
 
@@ -81,6 +218,7 @@
     width: 180px;
     border-radius: 30px;
     border-width: 3px;
+    width: 250px;
   }
 
   .img-nav:hover {
