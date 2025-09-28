@@ -321,3 +321,44 @@
     max-width: 900px;
   }
 }
+
+/* Corrige min-width do vídeo para responsividade universal */
+@media (max-width: 600px) {
+  .img {
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .video-container {
+    max-width: 100vw !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .pai {
+    gap: 0.1rem !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .img {
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .video-container {
+    max-width: 100vw !important;
+    width: 100% !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .pai {
+    gap: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}

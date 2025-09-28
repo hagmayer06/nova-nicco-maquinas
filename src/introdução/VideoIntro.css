@@ -111,6 +111,16 @@
     top: 5px;
     right: 5px;
   }
+
+  /* Reduzindo espaço abaixo do vídeo no mobile */
+  .img {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .video-container {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
 }
 
 /* Responsividade para Celulares */
