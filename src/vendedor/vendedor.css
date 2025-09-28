@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
 
+.paiV {
+    display: flex;
+    gap: 20px;
+    margin: 90px 20px ;
+}
 .foto img {
     border-radius: 20px;
-    border: solid 2px rgb(255, 170, 0)
+    border: solid 2px rgb(255, 170, 0);
+    margin-top: 20px;
 }
 
 .historia {
@@ -13,10 +19,12 @@
     font-size: 50px;
     margin-right: 150px;
     color: rgb(255, 170, 0);
+    margin-bottom:0px;
 }
 
-.texto {
-    font-size: 13px;
+.texto1 {
+    font-size: 11.5px;
+    color:white
 }
 .impacto {
     color:rgb(255, 170, 0);

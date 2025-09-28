@@ -9,15 +9,10 @@ export default function NavegaçãoMaquinas(props) {
 
         <ul className="car-maq">
           <li>{props.caracteristica1}</li>
-
-          <li>{props.caracteristica2}</li>
-
-          <li>{props.caracteristica3}</li>
         </ul>
 
-        <h2 class= "valor" >{props.valor}</h2>
+        <h2 class="valor">{props.valor}</h2>
       </div>
     </div>
   );
 }
-

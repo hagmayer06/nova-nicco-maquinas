@@ -8,72 +8,55 @@ const todasAsMaquinas = [
     nome: "Máquina A",
     imagem: "assets/RETRO.png",
     caracteristica1: "lindo",
-    caracteristica2: "lindo",
-    caracteristica3: "lindo",
     valor: "19,90",
   },
   {
     nome: "Máquina B",
     imagem: "assets/RETRO.png",
     caracteristica1: "incrível",
-    caracteristica2: "incrível",
-    caracteristica3: "incrível",
     valor: "190.000",
   },
   {
     nome: "Máquina C",
     imagem: "assets/RETRO.png",
-    caracteristica1: "bonito",
-    caracteristica2: "bonito",
-    caracteristica3: "bonito",
+    caracteristica1: "Descrição:",
     valor: "19,90",
   },
   {
     nome: "Máquina D",
     imagem: "assets/RETRO.png",
     caracteristica1: "potente",
-    caracteristica2: "potente",
-    caracteristica3: "potente",
     valor: "50.000",
   },
   {
     nome: "Máquina E",
     imagem: "assets/RETRO.png",
     caracteristica1: "moderno",
-    caracteristica2: "moderno",
-    caracteristica3: "moderno",
     valor: "75.000",
   },
   {
     nome: "Máquina F",
     imagem: "assets/RETRO.png",
     caracteristica1: "compacto",
-    caracteristica2: "compacto",
-    caracteristica3: "compacto",
     valor: "25.000",
   },
   {
     nome: "Máquina G",
     imagem: "assets/RETRO.png",
     caracteristica1: "compacto",
-    caracteristica2: "compacto",
-    caracteristica3: "compacto",
     valor: "25.000",
   },
   {
     nome: "Máquina H",
     imagem: "assets/RETRO.png",
     caracteristica1: "compacto",
-    caracteristica2: "compacto",
-    caracteristica3: "compacto",
     valor: "25.000",
   },
   {
     nome: "Máquina I",
     imagem: "assets/RETRO.png",
     caracteristica1: "compacto",
-    caracteristica2: "compacto",
-    caracteristica3: "compacto",
+  
     valor: "25.000",
   },
 ];
@@ -102,8 +85,6 @@ export default function ConjuntoF() {
             nome={maquina.nome}
             imagem={maquina.imagem}
             caracteristica1={maquina.caracteristica1}
-            caracteristica2={maquina.caracteristica2}
-            caracteristica3={maquina.caracteristica3}
             valor={maquina.valor}
           />
         ))}
