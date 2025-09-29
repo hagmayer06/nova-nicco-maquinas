@@ -1,52 +1,40 @@
 .posição {
   display: flex;
-  /* Isso permite que os cards quebrem para a próxima linha */
-  flex-wrap: wrap;
   flex-direction: column;
-
-  /* Centraliza os cards no container */
-  justify-content: center;
   align-items: center;
-
-  /* Espaçamento entre os cards na horizontal */
-  gap: 20px;
-
-  /* Mantém o espaçamento superior */
+  /* Centraliza o conteúdo (cards e botão) */
+  /* Espaçamento superior */
   margin-top: 25px;
+  width: 100%; /* Garante que o container ocupe toda a largura */
+  gap: 20px; /* Espaço entre Titulo, Cards-Container e Botão */
 }
 
 .cards-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  
+  /* --- MODIFICAÇÕES CRÍTICAS PARA ROLAGEM HORIZONTAL --- */
+  flex-wrap: nowrap; /* Impede a quebra de linha */
+  flex-direction: row; /* Força o layout em linha (é o padrão, mas é bom garantir) */
+  overflow-x: auto; /* Habilita a rolagem horizontal */
+  
+  justify-content: flex-start; /* Inicia o conteúdo na esquerda */
+  padding: 0 20px; /* Adiciona espaço nas laterais para um visual melhor na rolagem */
+  width: 100%; /* Ocupa toda a largura da tela */
+  
   gap: 20px;
-  width: 100%;
+  
+  /* Opcional: Esconde a barra de rolagem (WebKit) */
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
-.mostrarMaisOuMenos {
-  display: block;
-  margin: 15px auto 0;
-  padding: 4px 8px;
-  border: 1px solid rgb(255, 170, 0);
-  border-radius: 4px;
-  background-color: rgb(43, 42, 42);
-  color: rgb(255, 170, 0);
-  font-size: 10px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-  width: fit-content;
+/* Opcional: Esconde a barra de rolagem no Chrome/Safari */
+.cards-container::-webkit-scrollbar {
+  display: none;
 }
 
-.mostrarMaisOuMenos:hover {
-  background-color: rgb(255, 170, 0);
-  color: rgb(43, 42, 42);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
+/* As regras para .mostrarMaisOuMenos e Media Queries estão boas e não precisam de alteração. */
 
 /* Responsividade para Telas Grandes - Conjunto de Cards */
 @media (min-width: 1200px) {

@@ -67,7 +67,7 @@
 
     .navmaq { 
         padding: 30px;
-        gap: 20px;
+        gap: 60px;
         /* Garante que não quebre a linha em desktop, se houver espaço */
     }
 
@@ -100,7 +100,7 @@
     .navmaq { 
         justify-content: space-between;
         padding: 30px;
-        gap: 40px;
+        gap: 30px;
         /* Garante que não quebre a linha em desktop, se houver espaço */
     }
 

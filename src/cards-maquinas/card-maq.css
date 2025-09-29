@@ -1,4 +1,8 @@
 .card {
+  /* --- AJUSTE CRÍTICO PARA ROLAGEM HORIZONTAL --- */
+  flex-shrink: 0; 
+  /* ----------------------------------------------- */
+  
   width: 220px;
   max-width: 220px;
   height: auto;
@@ -12,6 +16,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+/* O restante do seu CSS do card permanece o mesmo */
 
 .card-imagem {
   width: 100%;
