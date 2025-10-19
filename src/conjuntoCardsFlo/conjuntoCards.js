@@ -5,22 +5,22 @@ import "./conjuntoCards.css";
 
 const todasAsMaquinas = [
   {
-    nome: "Máquina A",
-    imagem: "assets/RETRO.png",
-    caracteristica1: "lindo",
-    valor: "19,90",
+    nome: "Picador Florestal Bruno",
+    imagem: "assets/picador.jpeg",
+    caracteristica1: "Thunder ano 2024, com 1000 horas",
+    valor: "R$ 2.590.000,00",
   },
   {
-    nome: "Máquina B",
-    imagem: "assets/RETRO.png",
-    caracteristica1: "incrível",
-    valor: "190.000",
+    nome: "Skider CAT 545C ano 2013",
+    imagem: "assets/skidercat545c.jpeg",
+    caracteristica1: "Com 17.300 horas, trocado sistema de injeção e bomba, todas as revisões feitas éla concessionária, maquina a toda a prova!",
+    valor: "R$ 850.000,00",
   },
   {
-    nome: "Máquina C",
-    imagem: "assets/RETRO.png",
-    caracteristica1: "Descrição:",
-    valor: "19,90",
+    nome: "Escavadeira Hyundai R180 LC-9 Ano 2024",
+    imagem: "assets/hyundair180.jpeg",
+    caracteristica1: "Com apenas 293 horas, equipada com cabeçote feller marca Metacort MFD 1000. Local MG ",
+    valor: "R$ 950.000,00",
   },
   {
     nome: "Máquina D",
