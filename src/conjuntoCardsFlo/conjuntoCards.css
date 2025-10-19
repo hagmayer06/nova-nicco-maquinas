@@ -10,23 +10,40 @@
 }
 
 .cards-container {
-  display: flex;
-  
-  /* --- MODIFICAÇÕES CRÍTICAS PARA ROLAGEM HORIZONTAL --- */
-  flex-wrap: nowrap; /* Impede a quebra de linha */
-  flex-direction: row; /* Força o layout em linha (é o padrão, mas é bom garantir) */
-  overflow-x: auto; /* Habilita a rolagem horizontal */
-  
-  justify-content: flex-start; /* Inicia o conteúdo na esquerda */
-  padding: 0 20px; /* Adiciona espaço nas laterais para um visual melhor na rolagem */
-  width: 100%; /* Ocupa toda a largura da tela */
-  
-  gap: 20px;
-  
-  /* Opcional: Esconde a barra de rolagem (WebKit) */
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  /* Mobile-first: grid com 2 colunas para manter ordem e responsividade */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+  overflow: visible; /* evita esconder conteúdo no mobile */
+}
+
+/* Remove a barra de rolagem visual para navegadores WebKit quando houver overflow */
+.cards-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Em telas maiores, usamos o layout em linha com rolagem horizontal */
+@media (min-width: 600px) {
+  .cards-container {
+    display: flex;
+    flex-wrap: nowrap; /* Impede quebra de linha para rolagem horizontal */
+    flex-direction: row;
+    overflow-x: auto; /* Habilita a rolagem horizontal */
+    justify-content: flex-start;
+    padding: 0 20px;
+    width: 100%;
+    gap: 20px;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .cards-container::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* Opcional: Esconde a barra de rolagem no Chrome/Safari */
