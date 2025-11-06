@@ -25,24 +25,16 @@
   display: none;
 }
 
-/* Em telas maiores, usamos o layout em linha com rolagem horizontal */
+/* Em telas maiores, mantém grid 2 colunas */
 @media (min-width: 600px) {
   .cards-container {
-    display: flex;
-    flex-wrap: nowrap; /* Impede quebra de linha para rolagem horizontal */
-    flex-direction: row;
-    overflow-x: auto; /* Habilita a rolagem horizontal */
-    justify-content: flex-start;
-    padding: 0 20px;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
-
-  .cards-container::-webkit-scrollbar {
-    display: none;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    overflow: visible;
   }
 }
 
