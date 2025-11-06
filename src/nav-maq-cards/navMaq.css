@@ -128,18 +128,14 @@
   }
 
   .navmaq {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
     align-items: center;
-    flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
     max-height: none;
     overflow: visible;
-  }
-
-  .navmaq > div {
-    flex: 0 0 auto;
   }
 
   .img-nav {
@@ -164,8 +160,9 @@
   }
 
   .navmaq {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
     align-items: center;
     gap: 24px;
     padding: 30px;
@@ -194,8 +191,9 @@
   }
 
   .navmaq {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
     align-items: center;
     gap: 30px;
     padding: 30px;
@@ -225,7 +223,10 @@
   }
 
   .navmaq {
-    grid-template-columns: repeat(8, 1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
     gap: 30px;
     padding: 40px;
   }
@@ -255,6 +256,10 @@
   }
 
   .navmaq {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
     padding: 50px;
     gap: 40px;
   }
@@ -283,6 +288,10 @@
   }
 
   .navmaq {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
     padding: 60px;
     gap: 50px;
   }
