@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap");
 
 /* MOBILE-FIRST: Base para celulares */
 .paiV {
@@ -25,7 +25,7 @@
 }
 
 .historia h1 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: clamp(1.8rem, 5vw, 3rem);
   margin-right: 0;
   color: rgb(255, 170, 0);

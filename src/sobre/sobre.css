@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap");
 
 /* MOBILE-FIRST: Base para celulares */
 .sobre-container {
@@ -11,7 +11,7 @@
 }
 
 .sobre-titulo {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: clamp(1.8rem, 5vw, 3rem);
   color: rgb(255, 170, 0);
   text-align: center;
@@ -31,7 +31,7 @@
   font-size: clamp(0.9rem, 2.5vw, 1rem);
   line-height: 1.8;
   color: #cccccc;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   max-width: 100%;
 }
 
