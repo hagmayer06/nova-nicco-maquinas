@@ -17,6 +17,19 @@
   text-align: center;
   margin-bottom: 10px;
   line-height: 1.2;
+  background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+  padding: clamp(12px, 3vw, 16px) clamp(14px, 4vw, 20px);
+  border: 2px solid rgb(255, 170, 0);
+  border-radius: 8px;
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.5),
+    0 0 1px rgba(255, 170, 0, 0.3) inset,
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
 }
 
 .sobre-conteudo {
@@ -49,6 +62,8 @@
 
   .sobre-titulo {
     font-size: clamp(2rem, 5vw, 3.2rem);
+    padding: clamp(12px, 3vw, 18px) clamp(16px, 4vw, 24px);
+    letter-spacing: 1.2px;
   }
 
   .sobre-texto {
@@ -68,6 +83,8 @@
   .sobre-titulo {
     font-size: clamp(2.2rem, 4.5vw, 3.5rem);
     text-align: left;
+    padding: clamp(14px, 3.2vw, 20px) clamp(18px, 4.2vw, 26px);
+    letter-spacing: 1.3px;
   }
 
   .sobre-conteudo {
@@ -90,6 +107,8 @@
 
   .sobre-titulo {
     font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    padding: clamp(14px, 3.5vw, 22px) clamp(20px, 4.5vw, 30px);
+    letter-spacing: 1.4px;
   }
 
   .sobre-texto {
@@ -106,6 +125,9 @@
 
   .sobre-titulo {
     font-size: clamp(2.6rem, 4vw, 4rem);
+    padding: clamp(16px, 3.8vw, 24px) clamp(24px, 5vw, 32px);
+    letter-spacing: 1.5px;
+    border-width: 2px;
   }
 
   .sobre-texto {
@@ -122,6 +144,9 @@
 
   .sobre-titulo {
     font-size: clamp(2.8rem, 4vw, 4.3rem);
+    padding: clamp(18px, 4vw, 26px) clamp(26px, 5.2vw, 34px);
+    letter-spacing: 1.6px;
+    border-width: 2.5px;
   }
 
   .sobre-texto {
@@ -138,6 +163,9 @@
 
   .sobre-titulo {
     font-size: clamp(3rem, 4.2vw, 4.6rem);
+    padding: clamp(20px, 4.2vw, 28px) clamp(28px, 5.4vw, 36px);
+    letter-spacing: 1.7px;
+    border-width: 3px;
   }
 
   .sobre-texto {
@@ -154,6 +182,9 @@
 
   .sobre-titulo {
     font-size: 5rem;
+    padding: 22px 32px;
+    letter-spacing: 1.8px;
+    border-width: 3px;
   }
 
   .sobre-texto {
@@ -170,6 +201,9 @@
 
   .sobre-titulo {
     font-size: 6rem;
+    padding: 32px 48px;
+    letter-spacing: 2px;
+    border-width: 4px;
   }
 
   .sobre-texto {
