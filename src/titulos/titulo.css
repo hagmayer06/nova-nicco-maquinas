@@ -1,101 +1,164 @@
-@import url("https://fonts.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap");
-.titulo {
-  /*
-  ADICIONADO: box-sizing: border-box;
-  Isso garante que o 'padding' e a 'border' sejam incluídos DENTRO
-  da largura e altura do elemento, e não adicionados a elas.
-  */
-  box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap");
 
+/* MOBILE-FIRST: Base para celulares pequenos */
+.titulo {
+  box-sizing: border-box;
   color: rgb(255, 170, 0);
   font-family: "Bebas Neue", sans-serif;
-  font-size: 250%;
+  font-size: clamp(1.4rem, 4vw, 2.5rem);
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
   background-color: #202223;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 2px solid rgb(255, 170, 0);
-  margin-left: 220px;
-  margin-right: 220px;
-  padding: 3px 3px 3px 3px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: clamp(8px, 2vw, 12px);
+  max-width: 90%;
   box-shadow: black 2px 4px 8px;
   transition: all 0.3s ease;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .titulo:hover {
-  /* Mantendo o efeito de hover com as alterações */
-  font-size: 255%;
-  padding: 5px;
-  margin-top: 35px;
+  font-size: clamp(1.45rem, 4.2vw, 2.55rem);
+  padding: clamp(10px, 2.2vw, 14px);
+  margin-top: 18px;
   box-shadow: black 4px 6px 10px;
 }
 
-/* Responsividade para Telas Grandes - Títulos */
+/* Tablet pequeno */
+@media (min-width: 480px) {
+  .titulo {
+    font-size: clamp(1.6rem, 4vw, 2.7rem);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 85%;
+    padding: clamp(8px, 2vw, 15px);
+    border-radius: 9px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  .titulo {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    max-width: 80%;
+    margin-top: 25px;
+    border-radius: 10px;
+    padding: clamp(10px, 2vw, 16px);
+  }
+}
+
+/* Tablet médio */
+@media (min-width: 768px) {
+  .titulo {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    max-width: 75%;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    border-radius: 11px;
+    padding: clamp(10px, 2.2vw, 18px);
+    border-width: 2px;
+  }
+}
+
+/* Desktop pequeno */
+@media (min-width: 992px) {
+  .titulo {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    max-width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 12px;
+    padding: clamp(12px, 2.3vw, 20px);
+    border-width: 2px;
+    margin-top: 30px;
+  }
+
+  .titulo:hover {
+    font-size: clamp(2.25rem, 4.2vw, 3.6rem);
+    padding: clamp(14px, 2.5vw, 22px);
+    margin-top: 28px;
+  }
+}
+
+/* Desktop */
 @media (min-width: 1200px) {
   .titulo {
-    font-size: 280%;
-    margin-left: 180px;
-    margin-right: 180px;
-    padding: 8px;
-    border-radius: 12px;
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
+    max-width: 65%;
+    margin-left: 17.5%;
+    margin-right: 17.5%;
+    border-radius: 13px;
+    padding: clamp(12px, 2.4vw, 22px);
     border-width: 3px;
+    margin-top: 35px;
   }
 
   .titulo:hover {
-    font-size: 290%;
-    padding: 10px;
+    font-size: clamp(2.45rem, 4.2vw, 3.9rem);
+    padding: clamp(14px, 2.6vw, 24px);
+    margin-top: 33px;
   }
 }
 
+/* Desktop grande */
 @media (min-width: 1400px) {
   .titulo {
-    font-size: 320%;
-    margin-left: 150px;
-    margin-right: 150px;
-    padding: 10px;
-    border-radius: 15px;
+    font-size: clamp(2.6rem, 4vw, 4.2rem);
+    max-width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 14px;
+    padding: clamp(14px, 2.5vw, 24px);
     border-width: 3px;
-  }
-
-  .titulo:hover {
-    font-size: 330%;
-    padding: 12px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .titulo {
-    font-size: 380%;
-    margin-left: 100px;
-    margin-right: 100px;
-    padding: 15px;
-    border-radius: 20px;
-    border-width: 4px;
     margin-top: 40px;
   }
 
   .titulo:hover {
-    font-size: 390%;
-    padding: 18px;
-    margin-top: 45px;
+    font-size: clamp(2.65rem, 4.2vw, 4.3rem);
+    padding: clamp(16px, 2.7vw, 26px);
+    margin-top: 38px;
   }
 }
 
-@media (min-width: 2560px) {
+/* Desktop extra grande */
+@media (min-width: 1920px) {
   .titulo {
-    font-size: 450%;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 20px;
-    border-radius: 25px;
-    border-width: 5px;
-    margin-top: 50px;
+    font-size: clamp(3rem, 4.2vw, 4.8rem);
+    max-width: 55%;
+    margin-left: 22.5%;
+    margin-right: 22.5%;
+    padding: clamp(16px, 2.6vw, 28px);
+    border-radius: 16px;
+    border-width: 4px;
+    margin-top: 45px;
   }
 
   .titulo:hover {
-    font-size: 460%;
-    padding: 25px;
-    margin-top: 55px;
+    font-size: clamp(3.05rem, 4.4vw, 4.9rem);
+    padding: clamp(18px, 2.8vw, 30px);
+    margin-top: 43px;
+  }
+}
+
+/* 4K e superior */
+@media (min-width: 2560px) {
+  .titulo {
+    font-size: 5.5rem;
+    max-width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 32px;
+    border-radius: 20px;
+    border-width: 5px;
+    margin-top: 60px;
+  }
+
+  .titulo:hover {
+    font-size: 5.6rem;
+    padding: 36px;
+    margin-top: 58px;
   }
 }

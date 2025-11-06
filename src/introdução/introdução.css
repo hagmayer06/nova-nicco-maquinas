@@ -17,27 +17,25 @@
 }
 
 /* ===== COMPONENTE PRINCIPAL - MOBILE FIRST ===== */
-/* ===== COMPONENTE PRINCIPAL - MOBILE FIRST ===== */
 .pai {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem 1rem;
+  padding: clamp(1.5rem, 5vw, 3rem) clamp(0.75rem, 3vw, 2rem);
   background-color: var(--cor-primaria);
-  /* min-height: 100vh; <--- COMENTE OU REMOVA ESTA LINHA */ 
   color: var(--cor-texto);
   font-family: var(--font-secundaria);
-  gap: 2rem;
+  gap: clamp(1.5rem, 4vw, 3rem);
 }
 
 /* ===== CONTAINER DE CONTEÚDO ===== */
 .pai > div:first-child {
   order: 1;
   width: 100%;
-  max-width: 90%;
+  max-width: clamp(90%, 95%, 100%);
   display: flex;
-  flex-direction: column; /* Títulos sempre em coluna */
+  flex-direction: column;
 }
 
 .img {
@@ -45,6 +43,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 /* ===== TIPOGRAFIA ===== */
