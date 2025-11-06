@@ -49,6 +49,7 @@
   border: 2px solid rgb(0, 0, 0);
   box-shadow: black 4px 4px 12px;
   transition: all 0.5s ease;
+  padding: clamp(6px, 1.5vw, 10px);
 }
 
 .img-nav:hover {
@@ -82,6 +83,7 @@
     width: clamp(60px, 14vw, 90px);
     border-radius: 14px;
     border-width: 2px;
+    padding: clamp(6px, 1.5vw, 10px);
   }
 
   .img-nav:hover {
@@ -108,6 +110,7 @@
   .img-nav {
     width: clamp(65px, 15vw, 100px);
     border-radius: 15px;
+    padding: clamp(7px, 1.8vw, 11px);
   }
 
   .img-nav:hover {
@@ -135,6 +138,7 @@
   .img-nav {
     width: clamp(70px, 16vw, 110px);
     border-radius: 16px;
+    padding: clamp(8px, 2vw, 12px);
   }
 
   .img-nav:hover {
@@ -162,6 +166,7 @@
     width: clamp(85px, 17vw, 125px);
     border-radius: 18px;
     border-width: 2px;
+    padding: clamp(10px, 2.2vw, 14px);
   }
 
   .img-nav:hover {
@@ -195,6 +200,7 @@
     width: clamp(100px, 18vw, 140px);
     border-radius: 20px;
     border-width: 2px;
+    padding: clamp(12px, 2.4vw, 16px);
   }
 
   .img-nav:hover {
@@ -225,6 +231,7 @@
     width: clamp(120px, 19vw, 160px);
     border-radius: 22px;
     border-width: 2px;
+    padding: clamp(14px, 2.6vw, 18px);
   }
 
   .img-nav:hover {
@@ -256,6 +263,7 @@
     width: clamp(140px, 18vw, 180px);
     border-radius: 24px;
     border-width: 3px;
+    padding: clamp(16px, 2.8vw, 20px);
   }
 
   .img-nav:hover {
@@ -287,6 +295,7 @@
     width: clamp(160px, 18vw, 210px);
     border-radius: 26px;
     border-width: 3px;
+    padding: clamp(18px, 3vw, 22px);
   }
 
   .img-nav:hover {
@@ -319,6 +328,7 @@
     width: clamp(180px, 17vw, 260px);
     border-radius: 30px;
     border-width: 4px;
+    padding: clamp(20px, 3.2vw, 24px);
   }
 
   .img-nav:hover {
@@ -351,6 +361,7 @@
     width: 300px;
     border-radius: 40px;
     border-width: 5px;
+    padding: 28px;
   }
 
   .img-nav:hover {
