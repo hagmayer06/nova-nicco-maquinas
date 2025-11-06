@@ -3,15 +3,15 @@
   flex-shrink: 0; 
   /* ----------------------------------------------- */
   
-  width: 220px;
-  max-width: 220px;
+  width: 280px; /* Tamanho base para mobile aumentado */
+  max-width: 90vw; /* Limita ao tamanho da tela */
   height: auto;
-  padding: 10px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   background-color: #2c2f33; /* Cinza chumbo */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -20,7 +20,7 @@
 
 .card-imagem {
   width: 100%;
-  height: 130px; /* Altura da imagem reduzida novamente */
+  height: 160px; /* Altura maior para mobile */
   object-fit: cover;
   border-radius: 8px;
   border: 2px solid rgb(255, 170, 0); /* Borda amarela */
@@ -36,8 +36,9 @@
 
 .nome-maq {
   color: rgb(255, 170, 0); /* Amarelo */
-  font-size: 1.1em; /* Fonte do título menor */
-  margin-bottom: 4px;
+  font-size: 1.2em; /* Tamanho melhor para mobile */
+  margin-bottom: 6px;
+  font-weight: 600;
 }
 
 .car-maq {
@@ -46,39 +47,83 @@
   margin: 0;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 5px; /* Espaço entre itens da lista menor */
+  gap: 6px; /* Espaço entre itens da lista menor */
   width: 100%;
 }
 
 .car-maq li {
   background-color: #3b3e41;
   color: #c7c7c7;
-  padding: 5px 8px; /* Preenchimento dos itens menor */
+  padding: 8px 10px; /* Padding melhor para mobile */
   border-radius: 5px;
-  font-size: 0.8em; /* Fonte da lista menor */
+  font-size: 0.9em; /* Fonte legível no mobile */
   text-align: left;
 }
 
 .valor {
   color: rgb(255, 170, 0); /* Amarelo */
-  font-size: 20px; /* Fonte do valor menor */
+  font-size: 24px; /* Valor mais destacado */
   font-weight: bold;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
+  margin-top: 8px;
+}
+
+/* Ajuste para celulares muito pequenos */
+@media (max-width: 360px) {
+  .card {
+    width: 260px;
+    padding: 10px;
+    gap: 8px;
+  }
+  
+  .card-imagem {
+    height: 140px;
+  }
+  
+  .nome-maq {
+    font-size: 1.1em;
+  }
+  
+  .car-maq li {
+    padding: 6px 8px;
+    font-size: 0.85em;
+  }
+  
+  .valor {
+    font-size: 22px;
+  }
+}
+
+/* Tablet pequeno */
+@media (min-width: 600px) {
+  .card {
+    width: 300px;
+    padding: 14px;
+  }
+  
+  .card-imagem {
+    height: 170px;
+  }
+}
+
+/* Tablet */
 @media (min-width: 730px) {
   .card {
     width: 250px;
     max-width: 280px;
     padding: 15px;
-    gap: 5px;
+    gap: 10px;
   }
 }
+
+/* Desktop pequeno */
 @media (min-width: 1200px) {
   .card {
     width: 280px;
     max-width: 280px;
-    padding: 10px;
+    padding: 16px;
     gap: 12px;
   }
 
@@ -102,6 +147,7 @@
   }
 }
 
+/* Desktop médio */
 @media (min-width: 1400px) {
   .card {
     width: 320px;
@@ -135,6 +181,7 @@
   }
 }
 
+/* Desktop grande */
 @media (min-width: 1920px) {
   .card {
     width: 380px;
@@ -171,6 +218,7 @@
   }
 }
 
+/* 4K */
 @media (min-width: 2560px) {
   .card {
     width: 460px;
