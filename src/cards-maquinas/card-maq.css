@@ -1,8 +1,8 @@
 .card {
   /* --- AJUSTE CRÍTICO PARA ROLAGEM HORIZONTAL --- */
-  flex-shrink: 0; 
+  flex-shrink: 0;
   /* ----------------------------------------------- */
-  
+
   width: 280px; /* Tamanho base para mobile aumentado */
   max-width: 90vw; /* Limita ao tamanho da tela */
   height: auto;
@@ -67,9 +67,6 @@
   margin-top: 8px;
 }
 
-  margin-top: 8px;
-}
-
 /* Ajuste para celulares muito pequenos */
 @media (max-width: 360px) {
   .card {
@@ -77,20 +74,20 @@
     padding: 10px;
     gap: 8px;
   }
-  
+
   .card-imagem {
     height: 140px;
   }
-  
+
   .nome-maq {
     font-size: 1.1em;
   }
-  
+
   .car-maq li {
     padding: 6px 8px;
     font-size: 0.85em;
   }
-  
+
   .valor {
     font-size: 22px;
   }
@@ -102,7 +99,7 @@
     width: 300px;
     padding: 14px;
   }
-  
+
   .card-imagem {
     height: 170px;
   }
