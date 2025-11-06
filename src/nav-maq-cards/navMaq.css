@@ -128,9 +128,18 @@
   }
 
   .navmaq {
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .navmaq > div {
+    flex: 0 0 auto;
   }
 
   .img-nav {
@@ -155,7 +164,9 @@
   }
 
   .navmaq {
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 24px;
     padding: 30px;
   }
@@ -184,14 +195,10 @@
 
   .navmaq {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
     padding: 30px;
-  }
-
-  .navmaq > div {
-    flex: 0 0 auto;
   }
 
   .img-nav {
