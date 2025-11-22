@@ -6,11 +6,10 @@ import MachineSection from './components/MachineSection/MachineSection';
 import About from './components/About/About';
 import Footer from './components/Footer/Footer';
 import { forestalMachines, excavatorMachines, retroMachines, loaderMachines } from './data/machines';
-import './App.css';
 
 function App() {
   return (
-    <div className="app">
+    <div className="w-full min-h-screen bg-nicco-gray">
       <Header />
       <Hero />
       <MachineNavigation />
