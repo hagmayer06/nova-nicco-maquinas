@@ -5,29 +5,55 @@ const Hero = () => {
   return (
     <section
       id="top"
-      className="flex flex-col md:flex-row items-center text-center md:text-left px-3 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-48 py-6 sm:py-12 md:py-16 lg:py-20 xl:py-24 2xl:py-40 bg-nicco-gray text-white gap-6 sm:gap-10 md:gap-12 lg:gap-16 min-h-[70vh] md:min-h-[80vh] lg:min-h-[85vh] xl:min-h-[90vh] 2xl:min-h-screen justify-between"
+      className="relative min-h-[90vh] flex flex-col lg:flex-row items-center justify-center lg:justify-between px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-12 md:py-16 lg:py-20 bg-gradient-to-br from-nicco-gray via-nicco-gray to-black gap-8 lg:gap-12 xl:gap-16"
     >
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-nicco-orange/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-nicco-orange/5 rounded-full blur-3xl"></div>
+      </div>
+
       {/* Content */}
-      <div className="order-1 w-full max-w-[90%] sm:max-w-[85%] md:max-w-[60%] lg:max-w-[55%] xl:max-w-[50%] 2xl:max-w-[60%] md:mr-8 lg:mr-16 xl:mr-20 2xl:mr-24">
-        <div className="flex flex-col gap-4">
-          <h1 className="font-bebas text-nicco-orange text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl leading-tight mb-4 animate-[slideInFromLeft_2s_ease-out_forwards]">
-            Bem-vindo à Nicco Máquinas
-          </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl leading-relaxed text-gray-300 font-medium max-w-full mx-auto md:mx-0">
-            Seu projeto no ritmo certo!
-            <br />
-            Máquinas selecionadas, entrega ágil e suporte especializado.
-            <br />
-            <span className="text-nicco-orange font-bold shadow-[1px_1px_2px_rgba(0,0,0,0.5)]">
-              Pensou Máquina
-            </span>
-            , pensou Nicco!
+      <div className="relative z-10 w-full lg:w-1/2 text-center lg:text-left space-y-6 md:space-y-8">
+        <h1 className="font-bebas text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-nicco-orange leading-tight tracking-wide animate-[slideInFromLeft_1s_ease-out]">
+          Bem-vindo à
+          <br />
+          <span className="text-white">Nicco</span> Máquinas
+        </h1>
+        
+        <div className="space-y-4">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-montserrat text-white font-medium">
+            Seu projeto no <span className="text-nicco-orange font-bold">ritmo certo!</span>
           </p>
+          
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Máquinas selecionadas, entrega ágil e suporte especializado.
+          </p>
+          
+          <p className="text-xl sm:text-2xl md:text-3xl font-bebas text-nicco-orange pt-4">
+            Pensou Máquina, pensou Nicco!
+          </p>
+        </div>
+
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+          <a
+            href="#nav-maq"
+            className="bg-nicco-orange hover:bg-nicco-orange-dark text-black font-bebas text-lg md:text-xl px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-nicco-orange/50 hover:scale-105 active:scale-95"
+          >
+            Ver Máquinas
+          </a>
+          <a
+            href="#sobre"
+            className="border-2 border-nicco-orange text-nicco-orange hover:bg-nicco-orange hover:text-black font-bebas text-lg md:text-xl px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 active:scale-95"
+          >
+            Sobre Nós
+          </a>
         </div>
       </div>
 
       {/* Video */}
-      <div className="order-2 flex justify-center items-center w-full md:max-w-[35%] lg:max-w-[40%] xl:max-w-[45%] 2xl:max-w-[35%] min-w-[280px] md:min-w-[280px] lg:min-w-[320px] xl:min-w-[380px] 2xl:min-w-[500px]">
+      <div className="relative z-10 w-full lg:w-1/2 max-w-2xl">
         <VideoIntro />
       </div>
     </section>

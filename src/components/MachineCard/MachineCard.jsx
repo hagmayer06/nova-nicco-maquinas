@@ -3,32 +3,53 @@ import PropTypes from 'prop-types';
 
 const MachineCard = ({ name, image, description, price }) => {
   return (
-    <article className="flex-shrink-0 w-[240px] sm:w-[250px] md:w-[260px] lg:w-[280px] xl:w-[320px] 2xl:w-[480px] max-w-[95vw] h-auto p-2.5 sm:p-3 md:p-4 lg:p-5 xl:p-6 2xl:p-8 flex flex-col justify-start items-center gap-2 sm:gap-3 md:gap-3.5 lg:gap-4 bg-[#2c2f33] rounded-lg md:rounded-xl 2xl:rounded-[18px] shadow-[0_4px_8px_rgba(0,0,0,0.2)] transition-all duration-300 hover:shadow-[0_6px_12px_rgba(0,0,0,0.3)] hover:-translate-y-0.5">
-      {/* Image */}
-      <div className="w-full">
+    <article className="group w-full max-w-sm mx-auto bg-gradient-to-br from-[#2c2f33] to-[#1a1d20] rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-nicco-orange/20 hover:-translate-y-2">
+      {/* Image Container */}
+      <div className="relative w-full h-48 md:h-56 lg:h-64 overflow-hidden bg-black/20">
         <img
           src={image}
           alt={name}
-          className="w-full h-[120px] sm:h-[130px] md:h-[150px] lg:h-[170px] xl:h-[200px] 2xl:h-[340px] object-cover rounded-md md:rounded-lg 2xl:rounded-[15px] border-2 md:border-[3px] 2xl:border-[5px] border-nicco-orange"
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           loading="lazy"
         />
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
       </div>
 
       {/* Content */}
-      <div className="w-full flex flex-col items-center text-center">
-        <h3 className="text-nicco-orange text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-[2.4em] mb-1 sm:mb-1.5 md:mb-2 font-semibold leading-tight">
+      <div className="p-4 md:p-5 lg:p-6 space-y-3 md:space-y-4">
+        {/* Title */}
+        <h3 className="text-nicco-orange font-bebas text-xl md:text-2xl lg:text-3xl leading-tight tracking-wide">
           {name}
         </h3>
 
-        <div className="w-full">
-          <p className="bg-nicco-gray-light text-gray-300 p-1.5 sm:p-2 md:p-2.5 lg:p-3 2xl:p-4 rounded text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-left leading-relaxed">
+        {/* Description */}
+        <div className="bg-black/30 rounded-lg p-3 md:p-4 border border-nicco-gray-light/30">
+          <p className="text-gray-300 text-sm md:text-base leading-relaxed line-clamp-3">
             {description}
           </p>
         </div>
 
-        <div className="text-nicco-orange text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[3.6rem] font-bold mt-1.5 sm:mt-2 md:mt-2.5 lg:mt-3">
-          {price}
+        {/* Price */}
+        <div className="flex items-center justify-between pt-2 border-t border-nicco-gray-light/30">
+          <span className="text-gray-400 text-xs md:text-sm font-montserrat">Valor:</span>
+          <span className="text-nicco-orange font-bebas text-2xl md:text-3xl lg:text-4xl">
+            {price}
+          </span>
         </div>
+
+        {/* CTA Button */}
+        <button 
+          onClick={() => {
+            const phoneNumber = '5541988883793';
+            const message = `Olá! Gostaria de mais informações sobre: ${name}`;
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+          }}
+          className="w-full bg-nicco-orange hover:bg-nicco-orange-dark text-black font-bebas text-base md:text-lg py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-nicco-orange/50 active:scale-95"
+        >
+          Consultar Disponibilidade
+        </button>
       </div>
     </article>
   );

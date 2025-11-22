@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Header = () => {
   const handleContactClick = () => {
@@ -9,23 +10,25 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-nicco-gray shadow-[0_2px_10px_rgba(0,0,0,0.3)] flex justify-between items-center px-3 sm:px-4 md:px-8 lg:px-10 xl:px-12 2xl:px-20 py-2.5 sm:py-3 md:py-4 gap-2 flex-wrap">
-      {/* Logo */}
-      <div className="flex-shrink-0">
-        <img
-          src="/assets/nova_logo-removebg-preview.png"
-          alt="Nicco Máquinas Logo"
-          className="w-[60px] sm:w-[70px] md:w-[80px] lg:w-[90px] xl:w-[100px] 2xl:w-[130px] h-auto"
-        />
+    <header className="sticky top-0 z-50 bg-nicco-gray/95 backdrop-blur-sm shadow-lg flex justify-between items-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-3 md:py-4 gap-4">
+      {/* Logo - Absolute com width igual ao botão */}
+      <div className="w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px] xl:w-[200px] flex-shrink-0 relative">
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
+          <img
+            src="/assets/nova_logo-removebg-preview.png"
+            alt="Nicco Máquinas Logo"
+            className="w-20 sm:w-24 md:w-28 lg:w-32 xl:w-36 h-auto transition-transform hover:scale-105"
+          />
+        </div>
       </div>
 
-      {/* Navigation */}
-      <nav className="flex-shrink-0">
-        <ul className="flex items-center gap-2 sm:gap-4 md:gap-6 lg:gap-12 xl:gap-16 2xl:gap-24 list-none m-0 p-0">
+      {/* Navigation - Centralizada */}
+      <nav className="flex-1 flex justify-center">
+        <ul className="flex items-center gap-3 md:gap-4 lg:gap-6 xl:gap-8 list-none m-0 p-0">
           <li>
             <a
               href="#top"
-              className="no-underline text-nicco-orange font-bebas text-[11px] sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-semibold whitespace-nowrap shadow-[black_2px_4px_4px] transition-all duration-300 hover:text-[12px] hover:sm:text-[15px] hover:md:text-[17px] hover:lg:text-[20px] hover:xl:text-[22px] hover:shadow-[black_4px_6px_6px] hover:border-b-2 hover:border-nicco-orange hover:-translate-y-0.5"
+              className="relative block text-nicco-orange font-montserrat text-[10px] md:text-xs lg:text-sm xl:text-base font-semibold whitespace-nowrap transition-all duration-200 hover:text-nicco-orange-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-nicco-orange after:transition-all after:duration-300 hover:after:w-full"
             >
               HOME
             </a>
@@ -33,7 +36,7 @@ const Header = () => {
           <li>
             <a
               href="#nav-maq"
-              className="no-underline text-nicco-orange font-bebas text-[11px] sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-semibold whitespace-nowrap shadow-[black_2px_4px_4px] transition-all duration-300 hover:text-[12px] hover:sm:text-[15px] hover:md:text-[17px] hover:lg:text-[20px] hover:xl:text-[22px] hover:shadow-[black_4px_6px_6px] hover:border-b-2 hover:border-nicco-orange hover:-translate-y-0.5"
+              className="relative block text-nicco-orange font-montserrat text-[10px] md:text-xs lg:text-sm xl:text-base font-semibold whitespace-nowrap transition-all duration-200 hover:text-nicco-orange-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-nicco-orange after:transition-all after:duration-300 hover:after:w-full"
             >
               MÁQUINAS
             </a>
@@ -41,7 +44,7 @@ const Header = () => {
           <li>
             <a
               href="#sobre"
-              className="no-underline text-nicco-orange font-bebas text-[11px] sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl font-semibold whitespace-nowrap shadow-[black_2px_4px_4px] transition-all duration-300 hover:text-[12px] hover:sm:text-[15px] hover:md:text-[17px] hover:lg:text-[20px] hover:xl:text-[22px] hover:shadow-[black_4px_6px_6px] hover:border-b-2 hover:border-nicco-orange hover:-translate-y-0.5"
+              className="relative block text-nicco-orange font-montserrat text-[10px] md:text-xs lg:text-sm xl:text-base font-semibold whitespace-nowrap transition-all duration-200 hover:text-nicco-orange-dark after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-nicco-orange after:transition-all after:duration-300 hover:after:w-full"
             >
               SOBRE NÓS
             </a>
@@ -49,17 +52,15 @@ const Header = () => {
         </ul>
       </nav>
 
-      {/* Contact Button */}
-      <div
-        onClick={handleContactClick}
-        className="flex items-center gap-1.5 sm:gap-2 border-2 border-nicco-orange px-2 sm:px-3 md:px-4 lg:px-5 py-1.5 sm:py-2 rounded text-nicco-orange text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-base shadow-[black_2px_2px_10px] flex-shrink-0 cursor-pointer transition-all duration-300 hover:bg-nicco-orange hover:text-nicco-gray hover:-translate-y-0.5 hover:shadow-[black_3px_3px_15px]"
-      >
-        <img
-          className="w-5 h-auto"
-          src="/assets/wats2.png"
-          alt="WhatsApp"
-        />
-        <span className="font-bebas hidden sm:inline">Fale conosco</span>
+      {/* Contact Button - Cor da Marca com width fixa */}
+      <div className="w-[120px] sm:w-[140px] md:w-[160px] lg:w-[180px] xl:w-[200px] flex-shrink-0 flex justify-end">
+        <button
+          onClick={handleContactClick}
+          className="flex items-center gap-2 bg-nicco-orange hover:bg-nicco-orange-dark text-black font-montserrat text-xs md:text-sm lg:text-base px-3 md:px-4 lg:px-5 py-2 rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-nicco-orange/50 active:scale-95"
+        >
+          <FaWhatsapp className="w-4 h-4 md:w-5 md:h-5" />
+          <span className="hidden sm:inline">Fale conosco</span>
+        </button>
       </div>
     </header>
   );
